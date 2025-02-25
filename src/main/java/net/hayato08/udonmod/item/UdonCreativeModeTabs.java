@@ -17,9 +17,9 @@ public class UdonCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, UdonMod.MOD_ID);
 
     public static final Supplier<CreativeModeTab> UDON_ITEMS_TAB = CREATIVE_MODE_TAB.register("udon_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(UdonItems.FLOUR.get()))
-                    .title(Component.translatable("creativetab.udonmod.udon_items"))
-                    .displayItems(((itemDisplayParameters, output) ->
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(UdonItems.FLOUR.get())) // タブのアイコン
+                    .title(Component.translatable("creativetab.udonmod.udon_items")) // タブのタイトル
+                    .displayItems(((itemDisplayParameters, output) -> // そのタブに表示するアイテム
                     {
                         output.accept(UdonItems.DASHI);
                         output.accept(UdonItems.DRIED_IWASHI);
@@ -31,7 +31,6 @@ public class UdonCreativeModeTabs {
                         output.accept(UdonItems.KATSUO_FLAKES);
                         output.accept(UdonItems.RAW_UDON);
                         output.accept(UdonItems.RICH_DASHI);
-                        output.accept(UdonBlocks.STONE_MILL);
                         output.accept(UdonItems.UDON_ROPE);
                     }))
 
@@ -39,10 +38,10 @@ public class UdonCreativeModeTabs {
 
     // 武器・防具のタブ
     public static final Supplier<CreativeModeTab> UDON_TOOLS_TAB = CREATIVE_MODE_TAB.register("udon_tools_tab",
-        () -> CreativeModeTab.builder().icon(() -> new ItemStack(UdonItems.ICED_UDON.get()))
-                .withTabsBefore(ResourceLocation.fromNamespaceAndPath(UdonMod.MOD_ID, "udon_items_tab"))
-                .title(Component.translatable("creativetab.udonmod.udon_tools"))
-                .displayItems(((itemDisplayParameters, output) ->
+        () -> CreativeModeTab.builder().icon(() -> new ItemStack(UdonBlocks.STONE_MILL.get())) // タブのアイコン
+                .withTabsBefore(ResourceLocation.fromNamespaceAndPath(UdonMod.MOD_ID, "udon_items_tab")) //タブの場所（パスで指定したタブの右側に追加）
+                .title(Component.translatable("creativetab.udonmod.udon_tools")) // タブのタイトル
+                .displayItems(((itemDisplayParameters, output) -> // そのタブに表示するアイテム
                 {
                     output.accept(UdonItems.ICED_UDON);
                 }))
@@ -50,10 +49,10 @@ public class UdonCreativeModeTabs {
                 .build());
 
     public static final Supplier<CreativeModeTab> UDON_FOODS_TAB = CREATIVE_MODE_TAB.register("udon_foods_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(UdonItems.BUKKAKE_UDON.get()))
-                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(UdonMod.MOD_ID, "udon_tools_tab"))
-                    .title(Component.translatable("creativetab.udonmod.udon_foods"))
-                    .displayItems(((itemDisplayParameters, output) ->
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(UdonItems.BUKKAKE_UDON.get())) // タブのアイコン
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(UdonMod.MOD_ID, "udon_tools_tab")) //タブの場所（パスで指定したタブの右側に追加）
+                    .title(Component.translatable("creativetab.udonmod.udon_foods")) // タブのタイトル
+                    .displayItems(((itemDisplayParameters, output) -> // そのタブに表示するアイテム
                     {
                         output.accept(UdonItems.BUKKAKE_UDON);
                         output.accept(UdonItems.RICH_BUKKAKE_UDON);
@@ -66,6 +65,17 @@ public class UdonCreativeModeTabs {
                         output.accept(UdonItems.ZARU_UDON);
                         output.accept(UdonItems.RICH_ZARU_UDON);
 
+                    }))
+
+                    .build());
+
+    public static final Supplier<CreativeModeTab> UDON_FUNCTIONAL_BLOCKS_TAB = CREATIVE_MODE_TAB.register("udon_functional_blocks_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(UdonItems.ICED_UDON.get())) // タブのアイコン
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(UdonMod.MOD_ID, "udon_foods_tab")) //タブの場所（パスで指定したタブの右側に追加)
+                    .title(Component.translatable("creativetab.udonmod.udon_tools")) // タブのタイトル
+                    .displayItems(((itemDisplayParameters, output) -> // そのタブに表示するアイテム
+                    {
+                        output.accept(UdonBlocks.STONE_MILL);
                     }))
 
                     .build());

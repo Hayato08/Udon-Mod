@@ -5,13 +5,12 @@ import net.hayato08.udonmod.item.UdonItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import javax.naming.directory.ModificationItem;
 import java.util.function.Supplier;
 
 public class UdonBlocks {
@@ -20,7 +19,11 @@ public class UdonBlocks {
 
     // レジストリに登録
     public static final DeferredBlock<Block> STONE_MILL =
-            registerBlock("stone_mill", () ->  new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONECUTTER)));
+            registerBlock("stone_mill", () ->  new Block(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)
+            ));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "udonmod:item/dried_iwashi"
+    "layer0": "udonmod:item/dry_iwashi"
   }
 }
