@@ -1,0 +1,10 @@
+{
+  "stone_mill_use": {
+    "subtitle": "sounds.udonmod.stone_mill_use",
+    "sounds": [
+      {
+        "name": "udonmod:stone_mill_use"
+      }
+    ]
+  }
+}

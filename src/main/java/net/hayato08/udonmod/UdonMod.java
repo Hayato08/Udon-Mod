@@ -3,6 +3,7 @@ package net.hayato08.udonmod;
 import net.hayato08.udonmod.block.UdonBlocks;
 import net.hayato08.udonmod.init.UdonModMenus;
 import net.hayato08.udonmod.item.UdonItems;
+import net.hayato08.udonmod.sound.UdonSounds;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -54,7 +55,8 @@ public class UdonMod
 
         UdonItems.register(modEventBus);
         UdonBlocks.register(modEventBus);
-        UdonModMenus.REGISTRY.register(modEventBus);
+        UdonModMenus.register(modEventBus);
+        UdonSounds.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
