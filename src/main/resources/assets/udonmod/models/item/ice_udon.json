@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "udonmod:item/iced_udon"
+    "layer0": "udonmod:item/ice_udon"
   }
 }

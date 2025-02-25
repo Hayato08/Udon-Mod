@@ -1,6 +1,5 @@
 package net.hayato08.udonmod.procedures;
 
-import net.hayato08.udonmod.UdonMod;
 import net.hayato08.udonmod.item.UdonItems;
 import net.hayato08.udonmod.sound.UdonSounds;
 import net.minecraft.sounds.SoundSource;

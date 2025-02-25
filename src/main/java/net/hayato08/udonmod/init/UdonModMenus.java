@@ -1,7 +1,4 @@
 
-/*
- *	MCreator note: This file will be REGENERATED on each build.
- */
 package net.hayato08.udonmod.init;
 
 import net.hayato08.udonmod.UdonMod;

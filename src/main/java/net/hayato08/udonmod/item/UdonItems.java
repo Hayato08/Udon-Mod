@@ -22,10 +22,10 @@ public class UdonItems {
             ITEMS.register("dry_udon", () -> new Item(new Item.Properties()));
     // 冷凍うどん
     public static final DeferredItem<Item> ICED_UDON =
-            ITEMS.register("iced_udon", () -> new Item(new Item.Properties()));
+            ITEMS.register("ice_udon", () -> new Item(new Item.Properties()));
     // にぼし（乾燥したいわし）
     public static final DeferredItem<Item> DRIED_IWASHI =
-            ITEMS.register("dried_iwashi", () -> new Item(new Item.Properties()));
+            ITEMS.register("dry_iwashi", () -> new Item(new Item.Properties()));
     // いわし
     public static final DeferredItem<Item> IWASHI=
             ITEMS.register("iwashi", () -> new Item(new Item.Properties()));
