@@ -2,6 +2,7 @@ package net.hayato08.udonmod;
 
 import net.hayato08.udonmod.block.UdonBlocks;
 import net.hayato08.udonmod.init.UdonModMenus;
+import net.hayato08.udonmod.item.UdonCreativeModeTabs;
 import net.hayato08.udonmod.item.UdonItems;
 import net.hayato08.udonmod.sound.UdonSounds;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -53,10 +54,13 @@ public class UdonMod
 
         NeoForge.EVENT_BUS.register(this);
 
+        // レジストリの登録
+        UdonCreativeModeTabs.register(modEventBus);
         UdonItems.register(modEventBus);
         UdonBlocks.register(modEventBus);
         UdonModMenus.register(modEventBus);
         UdonSounds.register(modEventBus);
+
 
         modEventBus.addListener(this::addCreative);
 
@@ -100,8 +104,10 @@ public class UdonMod
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
             event.accept(UdonItems.FLOUR);
-            event.accept(UdonItems.DADHI);
+            event.accept(UdonItems.DASHI);
             event.accept(UdonItems.DRY_UDON);
+            event.accept(UdonItems.RAW_UDON);
+
         }
         else if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
         {

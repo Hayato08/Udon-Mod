@@ -12,7 +12,6 @@
   "item.udonmod.rich_zaru_udon": "Rich Zaru Udon",
   "item.udonmod.kitsune_udon": "Kitsune Udon",
   "item.udonmod.rich_kitsune_udon": "Kitsune Udon",
-  "block.udonmod.stone_mill": "Stone mill",
   "item.udonmod.rich_dashi": "Rich Dashi",
   "item.udonmod.katsuo": "Katsuo",
   "item.udonmod.katsuo_flakes": "Katsuo flakes",
@@ -21,13 +20,18 @@
   "item.udonmod.iwashi": "Iwashi",
   "item.udonmod.dried_iwashi": "Dried Iwashi",
   "item.udonmod.udon_rope": "Udon rope",
+  "item.udonmod.raw_udon": "Raw Udon",
 
   "block.udonmod.stone_mill": "Stone Mill Block",
 
   "gui.udonmod.stone_mill_gui.button_mill": "Mill",
 
 
-  "creativetabs.udon_tab": "Udon Mod"
+  "creativetab.udonmod.udon_items": "Udon Items",
+  "creativetab.udonmod.udon_tools": "Udon Tools",
+  "creativetab.udonmod.udon_foods": "Udon Foods"
+
+
 
 
 }
