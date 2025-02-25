@@ -7,6 +7,7 @@
   "item.udonmod.rich_curry_udon": "高級カレーうどん",
   "item.udonmod.dry_udon": "乾燥うどん",
   "item.udonmod.cold_udon": "冷うどん",
+  "item.udonmod.raw_udon": "生うどん",
   "item.udonmod.rich_cold_udon": "高級冷うどん",
   "item.udonmod.zaru_udon": "ざるうどん",
   "item.udonmod.rich_zaru_udon": "高級ざるうどん",
@@ -26,8 +27,8 @@
 
   "gui.udonmod.stone_mill_gui.button_mill": "製粉",
 
-
-
-  "creativetabs.udon_tab": "うどんMod"
+  "creativetab.udonmod.udon_items": "うどんアイテム",
+  "creativetab.udonmod.udon_tools": "うどんツール",
+  "creativetab.udonmod.udon_foods": "うどん"
 
 }

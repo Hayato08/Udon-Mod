@@ -15,7 +15,7 @@ public class UdonItems {
     public static final DeferredItem<Item> FLOUR =
             ITEMS.register("flour", () -> new Item(new Item.Properties()));
     // だしの素
-    public static final DeferredItem<Item> DADHI =
+    public static final DeferredItem<Item> DASHI =
             ITEMS.register("dashi", () -> new Item(new Item.Properties()));
     // 乾燥うどん
     public static final DeferredItem<Item> DRY_UDON =
@@ -44,6 +44,9 @@ public class UdonItems {
     // 高級だし
     public static final DeferredItem<Item> RICH_DASHI =
             ITEMS.register("rich_dashi", () -> new Item(new Item.Properties()));
+    // 生うどん
+    public static final DeferredItem<Item> RAW_UDON=
+            ITEMS.register("raw_udon", () -> new Item(new Item.Properties()));
 
     // 食料（食べ物）
     // ぶっかけうどん
