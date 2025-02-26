@@ -14,8 +14,8 @@ public class UdonItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(UdonItems.DASHI.get());
-        basicItem(UdonItems.DRIED_IWASHI.get());
-        basicItem(UdonItems.DRIED_KATSUO.get());
+        basicItem(UdonItems.DRY_IWASHI.get());
+        basicItem(UdonItems.DRY_KATSUO.get());
         basicItem(UdonItems.DRY_UDON.get());
         basicItem(UdonItems.FLOUR.get());
         basicItem(UdonItems.IWASHI.get());
@@ -23,7 +23,7 @@ public class UdonItemModelProvider extends ItemModelProvider {
         basicItem(UdonItems.KATSUO_FLAKES.get());
         basicItem(UdonItems.RAW_UDON.get());
         basicItem(UdonItems.RICH_DASHI.get());
-        basicItem(UdonItems.ICED_UDON.get());
+        basicItem(UdonItems.ICE_UDON.get());
         basicItem(UdonItems.UDON_ROPE.get());
         basicItem(UdonItems.BUKKAKE_UDON.get());
         basicItem(UdonItems.RICH_BUKKAKE_UDON.get());
@@ -35,6 +35,9 @@ public class UdonItemModelProvider extends ItemModelProvider {
         basicItem(UdonItems.RICH_KITSUNE_UDON.get());
         basicItem(UdonItems.ZARU_UDON.get());
         basicItem(UdonItems.RICH_ZARU_UDON.get());
+        basicItem(UdonItems.BOILED_UDON.get());
+        basicItem(UdonItems.OAGE.get());
+
 
     }
 }

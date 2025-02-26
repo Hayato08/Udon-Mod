@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "udonmod:boiled_udon"
+    },
+    "B": {
+      "item": "minecraft:ice"
+    },
+    "C": {
+      "item": "udonmod:dashi"
+    }
+  },
+  "pattern": [
+    " C ",
+    "BAB",
+    " B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "udonmod:zaru_udon"
+  }
+}
