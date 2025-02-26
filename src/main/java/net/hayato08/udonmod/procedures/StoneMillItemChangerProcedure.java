@@ -2,6 +2,7 @@ package net.hayato08.udonmod.procedures;
 
 import net.hayato08.udonmod.item.UdonItems;
 import net.hayato08.udonmod.sound.UdonSounds;
+import net.hayato08.udonmod.util.UdonTags;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -23,6 +24,10 @@ public class StoneMillItemChangerProcedure
 		double slot1 = 0;
 
 		// スロット０に小麦が入っているとき
+		if(!(isVailedItem((entity instanceof Player pPpayerSlotItem && pPpayerSlotItem.containerMenu instanceof Supplier pSupplier &&
+				pSupplier.get() instanceof Map pSlot ? ((Slot) pSlot.get(0)).getItem() : ItemStack.EMPTY).getItem().getDefaultInstance())))
+			return;
+
 		if ((entity instanceof Player pPpayerSlotItem && pPpayerSlotItem.containerMenu instanceof Supplier pSupplier &&
 				pSupplier.get() instanceof Map pSlot ? ((Slot) pSlot.get(0)).getItem() : ItemStack.EMPTY).getItem() == Items.WHEAT)
 		{
@@ -73,7 +78,7 @@ public class StoneMillItemChangerProcedure
 	}
 
 	// 石臼使用時の音を再生
-	public static void playStoneMillSound (Player pPlayer)
+	private static void playStoneMillSound (Player pPlayer)
 	{
 		pPlayer.level().playSound(
 				null,
@@ -95,7 +100,7 @@ public class StoneMillItemChangerProcedure
 			 itemCanger(entity, pSetstack, slot0, slot1, true);
 	*/
 
-	public static void itemCanger(Entity entity, ItemStack pSetstack, double slot0, double slot1)
+	private static void itemCanger(Entity entity, ItemStack pSetstack, double slot0, double slot1)
 	{
 		if(slot0 + slot1 <= 64)
 		{
@@ -126,7 +131,7 @@ public class StoneMillItemChangerProcedure
 		}
 	}
 	// 各スロットのアイテムの個数を取得
-	public static int getAmount(Entity entity, int slotNo)
+	private static int getAmount(Entity entity, int slotNo)
 	{
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map pSlots)
 		{
@@ -135,5 +140,10 @@ public class StoneMillItemChangerProcedure
 				return stack.getCount();
 		}
 		return 0;
+	}
+
+	private static boolean isVailedItem(ItemStack item)
+	{
+		return item.is(UdonTags.Items.UDON_CHANGEABL_TO_POWDER);
 	}
 }
