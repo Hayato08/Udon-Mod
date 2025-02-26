@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "udonmod:boiled_udon"
+    },
+    {
+      "item": "udonmod:dashi"
+    },
+    {
+      "item": "udonmod:oage"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "udonmod:kitsune_udon"
+  }
+}

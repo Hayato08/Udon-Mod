@@ -14,6 +14,8 @@ public class UdonItems {
 
     public static final DeferredItem<Item> FLOUR =
             ITEMS.register("flour", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> OAGE =
+            ITEMS.register("oage", () -> new Item(new Item.Properties()));
     // だしの素
     public static final DeferredItem<Item> DASHI =
             ITEMS.register("dashi", () -> new Item(new Item.Properties()));
@@ -21,16 +23,19 @@ public class UdonItems {
     public static final DeferredItem<Item> DRY_UDON =
             ITEMS.register("dry_udon", () -> new Item(new Item.Properties()));
     // 冷凍うどん
-    public static final DeferredItem<Item> ICED_UDON =
+    public static final DeferredItem<Item> ICE_UDON =
             ITEMS.register("ice_udon", () -> new Item(new Item.Properties()));
+    // アツアツの素うどん
+    public static final DeferredItem<Item> BOILED_UDON =
+            ITEMS.register("boiled_udon", () -> new Item(new Item.Properties()));
     // にぼし（乾燥したいわし）
-    public static final DeferredItem<Item> DRIED_IWASHI =
+    public static final DeferredItem<Item> DRY_IWASHI =
             ITEMS.register("dry_iwashi", () -> new Item(new Item.Properties()));
     // いわし
     public static final DeferredItem<Item> IWASHI=
             ITEMS.register("iwashi", () -> new Item(new Item.Properties()));
     // 鰹節
-    public static final DeferredItem<Item> DRIED_KATSUO =
+    public static final DeferredItem<Item> DRY_KATSUO =
             ITEMS.register("dry_katsuo", () -> new Item(new Item.Properties()));
     // 削り鰹節
     public static final DeferredItem<Item> KATSUO_FLAKES =

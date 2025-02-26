@@ -53,7 +53,7 @@ public class StoneMillItemChangerProcedure
 		}
 		// かつお節を削り鰹節にする
 		else if((entity instanceof Player pPlayerSlotItem && pPlayerSlotItem.containerMenu instanceof Supplier pSupplier &&
-				pSupplier.get() instanceof Map pSlot ? ((Slot) pSlot.get(0)).getItem() : ItemStack.EMPTY).getItem() == UdonItems.DRIED_KATSUO.get())
+				pSupplier.get() instanceof Map pSlot ? ((Slot) pSlot.get(0)).getItem() : ItemStack.EMPTY).getItem() == UdonItems.DRY_KATSUO.get())
 		{
 			slot0 = getAmount(entity, 0); // スロット0にあるアイテムの個数
 			slot1 = getAmount(entity, 1); // スロット1にあるアイテムの個数

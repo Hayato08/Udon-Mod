@@ -36,8 +36,8 @@ public class UdonItemTagProvider extends ItemTagsProvider {
 
         // 石臼で使えるもの
         tag(UdonTags.Items.UDON_CHANGEABL_TO_POWDER)
-                .add(UdonItems.DRIED_KATSUO.get())
+                .add(UdonItems.DRY_KATSUO.get())
                 .add(Items.WHEAT)
-                .add(UdonItems.DRIED_IWASHI.get());
+                .add(UdonItems.DRY_IWASHI.get());
     }
 }
