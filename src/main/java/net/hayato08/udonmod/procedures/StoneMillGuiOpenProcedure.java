@@ -24,14 +24,24 @@ import javax.annotation.Nullable;
 public class StoneMillGuiOpenProcedure {
 	@SubscribeEvent
 	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+		// 対象の手でない場合は何もしない
 		if (event.getHand() != event.getEntity().getUsedItemHand())
 			return;
-		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getEntity());
+		// プレイヤーがいる場合
+		if (event.getEntity() instanceof Player player)
+		{
+			// スニーク中の場合は、GUIオープンを行わず通常の処理（ブロック設置など）に任せる
+			if (player.isShiftKeyDown())
+				return;
+			// スニークしていない場合で、対象ブロックが石臼ならGUIを開いてイベントをキャンセルする
+			if (event.getLevel().getBlockState(event.getPos()).getBlock() == UdonBlocks.STONE_MILL.get()) {
+				execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getEntity());
+				event.setCanceled(true);  // ここでイベントをキャンセルして、ブロック設置処理を止める
+			}
+		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
-	}
+
 
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
