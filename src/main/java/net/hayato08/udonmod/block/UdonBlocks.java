@@ -6,6 +6,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -19,7 +20,7 @@ public class UdonBlocks {
 
     // レジストリに登録
     public static final DeferredBlock<Block> STONE_MILL =
-            registerBlock("stone_mill", () ->  new Block(BlockBehaviour.Properties.of()
+            registerBlock("stone_mill", () ->  new StoneMillBlock(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)
