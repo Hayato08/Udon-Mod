@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "udonmod:item/rich_kitsune_udon"
-  }
-}
