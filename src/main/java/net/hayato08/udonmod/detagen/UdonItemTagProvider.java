@@ -6,6 +6,7 @@ import net.hayato08.udonmod.util.UdonTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -39,5 +40,11 @@ public class UdonItemTagProvider extends ItemTagsProvider {
                 .add(UdonItems.DRY_KATSUO.get())
                 .add(Items.WHEAT)
                 .add(UdonItems.DRY_IWASHI.get());
+
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(UdonItems.KITSUNE_HELMET.get())
+                .add(UdonItems.KITSUNE_CHESTPLATE.get())
+                .add(UdonItems.KITSUNE_LEGGINGS.get())
+                .add(UdonItems.KITSUNE_BOOTS.get());
     }
 }

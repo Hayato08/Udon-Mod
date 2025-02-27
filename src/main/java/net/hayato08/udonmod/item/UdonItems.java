@@ -53,6 +53,19 @@ public class UdonItems {
     public static final DeferredItem<Item> RAW_UDON=
             ITEMS.register("raw_udon", () -> new Item(new Item.Properties()));
 
+
+    public static final DeferredItem<Item> KITSUNE_HELMET =
+            ITEMS.register("kitsune_helmet", KitsuneItem.Helmet::new);
+
+    public static final DeferredItem<Item> KITSUNE_CHESTPLATE =
+            ITEMS.register("kitsune_chestplate", KitsuneItem.Chestplate::new);
+
+    public static final DeferredItem<Item> KITSUNE_LEGGINGS =
+            ITEMS.register("kitsune_leggings", KitsuneItem.Leggings::new);
+
+    public static final DeferredItem<Item> KITSUNE_BOOTS =
+            ITEMS.register("kitsune_boots", KitsuneItem.Boots::new);
+
     // 食料（食べ物）
     // ぶっかけうどん
     public static final DeferredItem<Item> BUKKAKE_UDON =
