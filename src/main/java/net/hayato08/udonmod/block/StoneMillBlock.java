@@ -35,7 +35,7 @@ public class StoneMillBlock extends Block {
             Block.box(5.0D, 9.1D, 13.0D, 11.0D, 15.0D, 14.0D)
     );
 
-    // 衝突判定用の形状は、下部のみの形状で高さを0～8/16に下げる
+    // 衝突判定用の形状は、下部のみ高さを10にする
     private static final VoxelShape COLLISION_SHAPE = Shapes.or(
             Block.box(3.0D, 0.0D, 15.0D, 13.0D, 10.0D, 16.0D),
             Block.box(2.0D, 0.0D, 14.0D, 14.0D, 10.0D, 15.0D),
@@ -56,15 +56,13 @@ public class StoneMillBlock extends Block {
             Block.box(5.0D, 9.1D, 13.0D, 11.0D, 15.0D, 14.0D)
     );
 
-
-
     // ブロックのアウトライン（レンダリングや選択時）には見た目の形状を使用
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return VISUAL_SHAPE;
     }
 
-    // 実際の衝突判定（プレイヤーとの衝突用）には高さを下げた形状を使用
+    // 実際の衝突判定（プレイヤーとの衝突用）には高さを上げた形状を使用
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return COLLISION_SHAPE;

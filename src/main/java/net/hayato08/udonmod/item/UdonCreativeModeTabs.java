@@ -34,6 +34,7 @@ public class UdonCreativeModeTabs {
                         output.accept(UdonItems.UDON_ROPE);
                         output.accept(UdonItems.BOILED_UDON);
                         output.accept(UdonItems.OAGE);
+                        output.accept(UdonItems.ICE_UDON);
 
 
                     }))
@@ -47,7 +48,11 @@ public class UdonCreativeModeTabs {
                 .title(Component.translatable("creativetab.udonmod.udon_tools")) // タブのタイトル
                 .displayItems(((itemDisplayParameters, output) -> // そのタブに表示するアイテム
                 {
-                    output.accept(UdonItems.ICE_UDON);
+                    output.accept(UdonItems.KITSUNE_HELMET);
+                    output.accept(UdonItems.KITSUNE_CHESTPLATE);
+                    output.accept(UdonItems.KITSUNE_LEGGINGS);
+                    output.accept(UdonItems.KITSUNE_BOOTS);
+
                 }))
 
                 .build());

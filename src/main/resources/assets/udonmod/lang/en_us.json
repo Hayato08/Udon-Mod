@@ -23,8 +23,15 @@
   "item.udonmod.raw_udon": "Raw Udon",
   "item.udonmod.boiled_udon": "Boiled Udon",
   "item.udonmod.oage": "Oage",
+  "item.udonmod.kitsune_leggings": "Kitsune Leggings",
+  "item.udonmod.kitsune_boots": "Kitsune Boots",
+  "item.udonmod.kitsune_chestplate": "Kitsune Chestplate",
+  "item.udonmod.kitsune_helmet": "Kitsune Helmet",
+
+
 
   "block.udonmod.stone_mill": "Stone Mill Block",
+
 
   "gui.udonmod.stone_mill_gui.button_mill": "Mill",
 

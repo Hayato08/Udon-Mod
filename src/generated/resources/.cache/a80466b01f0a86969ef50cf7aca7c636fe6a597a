@@ -1,3 +1,4 @@
-// 1.21.1	2025-02-26T16:33:51.3681488	Tags for minecraft:item mod id udonmod
+// 1.21.1	2025-02-28T03:06:56.9677689	Tags for minecraft:item mod id udonmod
+b0263fcc26eb691756f90bc994449a4af42bdbba data/minecraft/tags/item/trimmable_armor.json
 0b911cd1b234e6e76217d58ddd7413d6ecd983e7 data/udonmod/tags/item/udon_changeable_to_powder.json
 66f59753e9ac44720254fde573d58dc4cd82fc89 data/udonmod/tags/item/udon_foods.json
