@@ -44,7 +44,7 @@ public abstract class KitsuneItem extends ArmorItem {
 				map.put(Type.CHESTPLATE, 6);
 				map.put(Type.HELMET, 2);
 				map.put(Type.BODY, 6);
-			}), 9, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("udonmod:udon_kitsune_armor"))), 0f, 0f);
+			}), 9, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.FOX_AMBIENT), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("udonmod:udon_kitsune_armor"))), 0f, 0f);
 			registerHelper.register(ResourceLocation.parse("udonmod:kitsune"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});

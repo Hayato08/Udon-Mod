@@ -100,27 +100,27 @@ public class ItemRecipelProvider extends RecipeProvider {
                         .pattern("AAA")
                         .pattern("A A")
                         .define('A', UdonItems.OAGE)
-                        .unlockedBy("has_oage", has(UdonItems.OAGE.get()));
+                        .unlockedBy("has_oage", has(UdonItems.OAGE.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UdonItems.KITSUNE_CHESTPLATE.get())
                 .pattern("A A")
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', UdonItems.OAGE)
-                .unlockedBy("has_oage", has(UdonItems.OAGE.get()));
+                .unlockedBy("has_oage", has(UdonItems.OAGE.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UdonItems.KITSUNE_LEGGINGS.get())
                 .pattern("AAA")
                 .pattern("A A")
                 .pattern("A A")
                 .define('A', UdonItems.OAGE)
-                .unlockedBy("has_oage", has(UdonItems.OAGE.get()));
+                .unlockedBy("has_oage", has(UdonItems.OAGE.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UdonItems.KITSUNE_BOOTS.get())
                 .pattern("A A")
                 .pattern("A A")
                 .define('A', UdonItems.OAGE)
-                .unlockedBy("has_oage", has(UdonItems.OAGE.get()));
+                .unlockedBy("has_oage", has(UdonItems.OAGE.get())).save(recipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UdonItems.CURRY_UDON.get())
                 .requires(UdonItems.BOILED_UDON)

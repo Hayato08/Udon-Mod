@@ -1,8 +1,12 @@
-// 1.21.1	2025-02-26T18:45:37.5923794	Recipes
+// 1.21.1	2025-02-28T20:12:36.1965315	Recipes
 abf37cb4c5076ba0767eabfc688920875b66dcca data/udonmod/advancement/recipes/misc/bukkake_udon.json
 f387ef0f0745e9404b6c56c0668b7677a5b5189d data/udonmod/advancement/recipes/misc/cold_udon.json
 65e5e16c6a3a613c225d15236e34930c40837148 data/udonmod/advancement/recipes/misc/curry_udon.json
 30fb16505528b91972e664b0b154d25f96c0d442 data/udonmod/advancement/recipes/misc/ice_udon.json
+f57ca81db1ae70348efb163e9614bf9aaafcbc88 data/udonmod/advancement/recipes/misc/kitsune_boots.json
+69b9e340e6cdc6d6a483dee482a4300acb68314e data/udonmod/advancement/recipes/misc/kitsune_chestplate.json
+6367212d3963e9c5d4a9137c782c5f04eaa347d1 data/udonmod/advancement/recipes/misc/kitsune_helmet.json
+e1190ac2faeb1121db6071dd6974deb44243002e data/udonmod/advancement/recipes/misc/kitsune_leggings.json
 339724255d7cd192261c7cd2822facaabd348d3b data/udonmod/advancement/recipes/misc/kitsune_udon.json
 10896d073ae8a0777220036f2069be2c53a70b84 data/udonmod/advancement/recipes/misc/raw_udon.json
 5438121be522aae1fa707845a01ecb805227301b data/udonmod/advancement/recipes/misc/rich_bukkake_udon.json
@@ -18,6 +22,10 @@ e92e97692a0728174810bf2d57dc29f330c0f3ce data/udonmod/recipe/bukkake_udon.json
 12465181c81691e6cf0d2f0c7c0663df60ffe029 data/udonmod/recipe/cold_udon.json
 63f87b0abdd8a4615675d9b566a8a55dcb03bfda data/udonmod/recipe/curry_udon.json
 cb82c26876f8b1f729403c5d4e3c42806259b04b data/udonmod/recipe/ice_udon.json
+1bedcd77e821c675173f0e8635516de98390ec0c data/udonmod/recipe/kitsune_boots.json
+8d5e51a2063b10b9ee5c97e227919cbdfd2bbb99 data/udonmod/recipe/kitsune_chestplate.json
+b794465664113c8f268c5cf4f5beab6255e9ee89 data/udonmod/recipe/kitsune_helmet.json
+9c372740d23a24f19c0498f9f5491fca0310a809 data/udonmod/recipe/kitsune_leggings.json
 1bfcb6f58f0ac0c55c6e2a3e64e1aacb254df8f0 data/udonmod/recipe/kitsune_udon.json
 5edf34c7d6090373c439db60aab41927dbdbf4c7 data/udonmod/recipe/raw_udon.json
 342d549bd0f73d77aaff9c84d2e24424a790f680 data/udonmod/recipe/rich_bukkake_udon.json
