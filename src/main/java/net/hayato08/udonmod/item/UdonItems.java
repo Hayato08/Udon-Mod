@@ -1,6 +1,8 @@
 package net.hayato08.udonmod.item;
 
 import net.hayato08.udonmod.UdonMod;
+import net.hayato08.udonmod.item.custom.KitsuneItem;
+import net.hayato08.udonmod.item.custom.ModArmorItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -56,16 +58,20 @@ public class UdonItems {
 
 
     public static final DeferredItem<ArmorItem> KITSUNE_HELMET =
-            ITEMS.register("kitsune_helmet", KitsuneItem.Helmet::new);
+            ITEMS.register("kitsune_helmet",() -> new ModArmorItem(KitsuneItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> KITSUNE_CHESTPLATE =
-            ITEMS.register("kitsune_chestplate", KitsuneItem.Chestplate::new);
+            ITEMS.register("kitsune_chestplate",() -> new ModArmorItem(KitsuneItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE ,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE .getDurability(19))));
 
     public static final DeferredItem<ArmorItem> KITSUNE_LEGGINGS =
-            ITEMS.register("kitsune_leggings", KitsuneItem.Leggings::new);
+            ITEMS.register("kitsune_leggings",() -> new ModArmorItem(KitsuneItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> KITSUNE_BOOTS =
-            ITEMS.register("kitsune_boots", KitsuneItem.Boots::new);
+            ITEMS.register("kitsune_boots",() -> new ModArmorItem(KitsuneItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
 
     // 食料（食べ物）
     // ぶっかけうどん
@@ -144,7 +150,7 @@ public class UdonItems {
             ITEMS.register("rich_zaru_udon", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                     .nutrition(7) // 満腹度の設定
                     .saturationModifier(0.4f) // 隠し満腹度（満腹時以降の満腹度）
-                    .effect(new MobEffectInstance(MobEffects.DIG_SPEED, 1200*5, 0), 1.0F) // 採掘速度上昇 5分間
+                    .effect(new MobEffectInstance(MobEffects.DIG_SPEED, 1200*4, 0), 1.0F) // 採掘速度上昇 5分間
                     .fast()
                     .build())));
 
