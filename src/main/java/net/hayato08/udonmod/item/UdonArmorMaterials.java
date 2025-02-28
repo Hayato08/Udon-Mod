@@ -18,14 +18,14 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class UdonArmorMaterials {
-    public static final Holder<ArmorMaterial> UDON_ARMOR_MATERIAL = register("udon",
+    public static final Holder<ArmorMaterial> UDON_ARMOR_MATERIAL = register("kitsune",
             Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
                 attribute.put(ArmorItem.Type.BOOTS, 5);
                 attribute.put(ArmorItem.Type.LEGGINGS, 7);
                 attribute.put(ArmorItem.Type.CHESTPLATE, 9);
                 attribute.put(ArmorItem.Type.HELMET, 5);
                 attribute.put(ArmorItem.Type.BODY, 11);
-            }), 16, 2f, 0.1f, () -> UdonItems.DRY_UDON.get());
+            }), 16, 2f, 0.1f, () -> UdonItems.OAGE.get());
 
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,

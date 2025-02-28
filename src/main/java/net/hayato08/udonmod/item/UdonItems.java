@@ -4,6 +4,7 @@ import net.hayato08.udonmod.UdonMod;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -54,16 +55,16 @@ public class UdonItems {
             ITEMS.register("raw_udon", () -> new Item(new Item.Properties()));
 
 
-    public static final DeferredItem<Item> KITSUNE_HELMET =
+    public static final DeferredItem<ArmorItem> KITSUNE_HELMET =
             ITEMS.register("kitsune_helmet", KitsuneItem.Helmet::new);
 
-    public static final DeferredItem<Item> KITSUNE_CHESTPLATE =
+    public static final DeferredItem<ArmorItem> KITSUNE_CHESTPLATE =
             ITEMS.register("kitsune_chestplate", KitsuneItem.Chestplate::new);
 
-    public static final DeferredItem<Item> KITSUNE_LEGGINGS =
+    public static final DeferredItem<ArmorItem> KITSUNE_LEGGINGS =
             ITEMS.register("kitsune_leggings", KitsuneItem.Leggings::new);
 
-    public static final DeferredItem<Item> KITSUNE_BOOTS =
+    public static final DeferredItem<ArmorItem> KITSUNE_BOOTS =
             ITEMS.register("kitsune_boots", KitsuneItem.Boots::new);
 
     // 食料（食べ物）

@@ -35,15 +35,13 @@ public class UdonCreativeModeTabs {
                         output.accept(UdonItems.BOILED_UDON);
                         output.accept(UdonItems.OAGE);
                         output.accept(UdonItems.ICE_UDON);
-
-
                     }))
 
                     .build());
 
     // 武器・防具のタブ
     public static final Supplier<CreativeModeTab> UDON_TOOLS_TAB = CREATIVE_MODE_TAB.register("udon_tools_tab",
-        () -> CreativeModeTab.builder().icon(() -> new ItemStack(UdonItems.ICE_UDON.get())) // タブのアイコン
+        () -> CreativeModeTab.builder().icon(() -> new ItemStack(UdonItems.KITSUNE_HELMET.get())) // タブのアイコン
                 .withTabsBefore(ResourceLocation.fromNamespaceAndPath(UdonMod.MOD_ID, "udon_items_tab")) //タブの場所（パスで指定したタブの右側に追加）
                 .title(Component.translatable("creativetab.udonmod.udon_tools")) // タブのタイトル
                 .displayItems(((itemDisplayParameters, output) -> // そのタブに表示するアイテム
@@ -52,7 +50,6 @@ public class UdonCreativeModeTabs {
                     output.accept(UdonItems.KITSUNE_CHESTPLATE);
                     output.accept(UdonItems.KITSUNE_LEGGINGS);
                     output.accept(UdonItems.KITSUNE_BOOTS);
-
                 }))
 
                 .build());

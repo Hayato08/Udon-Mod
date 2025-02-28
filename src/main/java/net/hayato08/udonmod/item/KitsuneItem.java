@@ -65,6 +65,7 @@ public abstract class KitsuneItem extends ArmorItem {
 				return armorModel;
 			}
 		}, UdonItems.KITSUNE_HELMET.get());
+
 		event.registerItem(new IClientItemExtensions() {
 			@Override
 			@OnlyIn(Dist.CLIENT)
@@ -79,6 +80,7 @@ public abstract class KitsuneItem extends ArmorItem {
 				return armorModel;
 			}
 		}, UdonItems.KITSUNE_CHESTPLATE.get());
+
 		event.registerItem(new IClientItemExtensions() {
 			@Override
 			@OnlyIn(Dist.CLIENT)

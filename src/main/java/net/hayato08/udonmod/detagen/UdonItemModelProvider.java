@@ -62,8 +62,10 @@ public class UdonItemModelProvider extends ItemModelProvider {
         basicItem(UdonItems.BOILED_UDON.get());
         basicItem(UdonItems.OAGE.get());
 
-
-
+        trimmedArmorItem(UdonItems.KITSUNE_HELMET);
+        trimmedArmorItem(UdonItems.KITSUNE_CHESTPLATE);
+        trimmedArmorItem(UdonItems.KITSUNE_LEGGINGS);
+        trimmedArmorItem(UdonItems.KITSUNE_BOOTS);
 
     }
     // Shoutout to El_Redstoniano for making this
