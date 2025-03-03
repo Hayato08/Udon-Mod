@@ -1,19 +1,25 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "A": {
+  "ingredients": [
+    {
       "item": "udonmod:dashi"
     },
-    "B": {
+    {
+      "item": "udonmod:dashi"
+    },
+    {
+      "item": "udonmod:dashi"
+    },
+    {
+      "item": "udonmod:dashi"
+    },
+    {
       "item": "udonmod:dry_iwashi"
     }
-  },
-  "pattern": [
-    "AB"
   ],
   "result": {
-    "count": 1,
+    "count": 4,
     "id": "udonmod:rich_dashi"
   }
 }

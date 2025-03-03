@@ -50,6 +50,7 @@ public class UdonCreativeModeTabs {
                     output.accept(UdonItems.KITSUNE_CHESTPLATE);
                     output.accept(UdonItems.KITSUNE_LEGGINGS);
                     output.accept(UdonItems.KITSUNE_BOOTS);
+                    output.accept(UdonItems.KITSUNE_KATANA);
                 }))
 
                 .build());

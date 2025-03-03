@@ -1,7 +1,8 @@
-// 1.21.1	2025-02-28T20:12:36.1965315	Recipes
+// 1.21.1	2025-03-03T14:33:22.2171022	Recipes
 abf37cb4c5076ba0767eabfc688920875b66dcca data/udonmod/advancement/recipes/misc/bukkake_udon.json
 f387ef0f0745e9404b6c56c0668b7677a5b5189d data/udonmod/advancement/recipes/misc/cold_udon.json
 65e5e16c6a3a613c225d15236e34930c40837148 data/udonmod/advancement/recipes/misc/curry_udon.json
+cd27f5b46f7cac217c8bb04455a4066b5862e5aa data/udonmod/advancement/recipes/misc/dashi.json
 30fb16505528b91972e664b0b154d25f96c0d442 data/udonmod/advancement/recipes/misc/ice_udon.json
 f57ca81db1ae70348efb163e9614bf9aaafcbc88 data/udonmod/advancement/recipes/misc/kitsune_boots.json
 69b9e340e6cdc6d6a483dee482a4300acb68314e data/udonmod/advancement/recipes/misc/kitsune_chestplate.json
@@ -18,20 +19,21 @@ e1190ac2faeb1121db6071dd6974deb44243002e data/udonmod/advancement/recipes/misc/k
 6058a02ceba37bac76b17e0475491e3291c79f24 data/udonmod/advancement/recipes/misc/stone_mill.json
 ba895ea1353b2b31eab9f6458d32f7d79dd008c6 data/udonmod/advancement/recipes/misc/udon_rope.json
 ab50084c8afbf2e343ab4ecabfe494d1e5757940 data/udonmod/advancement/recipes/misc/zaru_udon.json
-e92e97692a0728174810bf2d57dc29f330c0f3ce data/udonmod/recipe/bukkake_udon.json
-12465181c81691e6cf0d2f0c7c0663df60ffe029 data/udonmod/recipe/cold_udon.json
+e5c51b14ea37e6ab70f369f1017342c9318170ed data/udonmod/recipe/bukkake_udon.json
+eca626e6c3d7e37b85eb3f7f15319e99c015ca29 data/udonmod/recipe/cold_udon.json
 63f87b0abdd8a4615675d9b566a8a55dcb03bfda data/udonmod/recipe/curry_udon.json
+3f8d34a1dca56021995305bd5af9ea5adf3ed7ee data/udonmod/recipe/dashi.json
 cb82c26876f8b1f729403c5d4e3c42806259b04b data/udonmod/recipe/ice_udon.json
 1bedcd77e821c675173f0e8635516de98390ec0c data/udonmod/recipe/kitsune_boots.json
 8d5e51a2063b10b9ee5c97e227919cbdfd2bbb99 data/udonmod/recipe/kitsune_chestplate.json
 b794465664113c8f268c5cf4f5beab6255e9ee89 data/udonmod/recipe/kitsune_helmet.json
 9c372740d23a24f19c0498f9f5491fca0310a809 data/udonmod/recipe/kitsune_leggings.json
 1bfcb6f58f0ac0c55c6e2a3e64e1aacb254df8f0 data/udonmod/recipe/kitsune_udon.json
-5edf34c7d6090373c439db60aab41927dbdbf4c7 data/udonmod/recipe/raw_udon.json
-342d549bd0f73d77aaff9c84d2e24424a790f680 data/udonmod/recipe/rich_bukkake_udon.json
-dbcaf6c852c24f9b51e834829209597f0b79bf35 data/udonmod/recipe/rich_cold_udon.json
+9937c58860143885419891ded11b930e85ffa078 data/udonmod/recipe/raw_udon.json
+b8fe8e6029f9400ec90d49e4f0068afaa541b178 data/udonmod/recipe/rich_bukkake_udon.json
+204da3710d8e2743374df1dc77aa6753893c4e5a data/udonmod/recipe/rich_cold_udon.json
 dea25732c04f7dce66728c039862324f480a5948 data/udonmod/recipe/rich_curry_udon.json
-cbcd405a6c57a7fc35255f4e5c16fda647d1570c data/udonmod/recipe/rich_dashi.json
+8662f02e0bf4f09fcd5002d3d031b7e08c583796 data/udonmod/recipe/rich_dashi.json
 79cbffc10dbb5f1a9fa06277012fa485d9f3f17e data/udonmod/recipe/rich_kitsune_udon.json
 18180bd6e6ca577e557d29a617515adc704f0161 data/udonmod/recipe/rich_zaru_udon.json
 3f45eebccb16cb08c0dcef7d0fcefb968be8cd8c data/udonmod/recipe/stone_mill.json

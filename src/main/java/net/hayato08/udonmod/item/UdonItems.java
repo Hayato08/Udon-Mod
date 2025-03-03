@@ -2,12 +2,16 @@ package net.hayato08.udonmod.item;
 
 import net.hayato08.udonmod.UdonMod;
 import net.hayato08.udonmod.item.custom.KitsuneItem;
+import net.hayato08.udonmod.item.custom.KitsuneKatanaItem;
 import net.hayato08.udonmod.item.custom.ModArmorItem;
+import net.hayato08.udonmod.item.custom.UdonToolTiers;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -56,7 +60,18 @@ public class UdonItems {
     public static final DeferredItem<Item> RAW_UDON=
             ITEMS.register("raw_udon", () -> new Item(new Item.Properties()));
 
+    // 武器（剣）kitsune_katana
+    public static final DeferredItem<SwordItem> KITSUNE_KATANA =
+            ITEMS.register("kitsune_katana", () ->
+                    new KitsuneKatanaItem(
+                            UdonToolTiers.KITSUNE,
+                            7,
+                            -2.4F,
+                            new Item.Properties().attributes(SwordItem.createAttributes(UdonToolTiers.KITSUNE, 7, -2.4F))
+                    )
+            );
 
+    // armor items (防具)
     public static final DeferredItem<ArmorItem> KITSUNE_HELMET =
             ITEMS.register("kitsune_helmet",() -> new ModArmorItem(KitsuneItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
