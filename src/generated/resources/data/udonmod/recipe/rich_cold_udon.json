@@ -1,16 +1,13 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "A": {
+  "ingredients": [
+    {
       "item": "udonmod:ice_udon"
     },
-    "B": {
+    {
       "item": "udonmod:rich_dashi"
     }
-  },
-  "pattern": [
-    "AB"
   ],
   "result": {
     "count": 1,

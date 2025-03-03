@@ -4,6 +4,7 @@ import net.hayato08.udonmod.block.UdonBlocks;
 import net.hayato08.udonmod.init.UdonModMenus;
 import net.hayato08.udonmod.item.UdonCreativeModeTabs;
 import net.hayato08.udonmod.item.UdonItems;
+import net.hayato08.udonmod.item.custom.KitsuneKatanaItem;
 import net.hayato08.udonmod.sound.UdonSounds;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -146,6 +147,8 @@ public class UdonMod
 
     @SubscribeEvent
     public void tick(ServerTickEvent.Post event) {
+
+        KitsuneKatanaItem.onServerTick(event); // きつね刀の処理（きつねの消滅）
         List<Tuple<Runnable, Integer>> actions = new ArrayList<>();
         workQueue.forEach(work -> {
             work.setB(work.getB() - 1);

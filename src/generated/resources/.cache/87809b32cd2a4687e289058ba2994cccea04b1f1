@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-28T17:31:04.7504535	Item Models: udonmod
+// 1.21.1	2025-03-03T14:33:22.2125165	Item Models: udonmod
 ebaa01a0c6c40d29244802167fd367200e5fca3b assets/udonmod/models/item/boiled_udon.json
 32b331c43972ad2e06f52cfd32f9dbdf9156598e assets/udonmod/models/item/bukkake_udon.json
 d7bf10dd617cb8f9a1f0a6d8a5d149319af26c51 assets/udonmod/models/item/cold_udon.json
@@ -45,6 +45,7 @@ b788b3910a65ef3ef461e28d18cba6c4b1285d17 assets/udonmod/models/item/kitsune_helm
 5678ab5eb61731f9c4d3d4da90a579aa7b008806 assets/udonmod/models/item/kitsune_helmet_netherite_trim.json
 d0fd6f3c0b871720b3e7665664697d866bfbe5e8 assets/udonmod/models/item/kitsune_helmet_quartz_trim.json
 d69ed000b1b0017877a3612c25e243ec8af63e1e assets/udonmod/models/item/kitsune_helmet_redstone_trim.json
+b892a3f7b60c80e17abecc47b50eb139517b51f6 assets/udonmod/models/item/kitsune_katana.json
 62237340279a6f7acd9a8bd29b0c485f6bec6dfe assets/udonmod/models/item/kitsune_leggings.json
 37ce59f0ee80d888099b1a51c9bd0b1d54e9c6ae assets/udonmod/models/item/kitsune_leggings_amethyst_trim.json
 390b25d7438d321ed9cb9479e9dc182dbf3e2a0e assets/udonmod/models/item/kitsune_leggings_copper_trim.json

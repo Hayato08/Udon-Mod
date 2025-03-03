@@ -3,14 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "udonmod:flour"
-    },
-    {
-      "item": "minecraft:egg"
+      "item": "udonmod:katsuo_flakes"
     }
   ],
   "result": {
-    "count": 1,
-    "id": "udonmod:raw_udon"
+    "count": 4,
+    "id": "udonmod:dashi"
   }
 }

@@ -1,7 +1,7 @@
-
-package net.hayato08.udonmod.item;
+package net.hayato08.udonmod.item.custom;
 
 import net.hayato08.udonmod.client.model.KitsuneArmorModel;
+import net.hayato08.udonmod.item.UdonItems;
 import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
@@ -33,20 +33,22 @@ import java.util.Map;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public abstract class KitsuneItem extends ArmorItem {
-	public static Holder<ArmorMaterial> ARMOR_MATERIAL = null;
+	public static Holder<ArmorMaterial> KITSUNE_ARMOR_MATERIAL = null;
 
 	@SubscribeEvent
 	public static void registerArmorMaterial(RegisterEvent event) {
 		event.register(Registries.ARMOR_MATERIAL, registerHelper -> {
 			ArmorMaterial armorMaterial = new ArmorMaterial(Util.make(new EnumMap<>(Type.class), map -> {
-				map.put(Type.BOOTS, 2);
+				map.put(Type.BOOTS, 3);
 				map.put(Type.LEGGINGS, 5);
 				map.put(Type.CHESTPLATE, 6);
-				map.put(Type.HELMET, 2);
-				map.put(Type.BODY, 6);
-			}), 9, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.FOX_AMBIENT), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("udonmod:udon_kitsune_armor"))), 0f, 0f);
+				map.put(Type.HELMET, 3);
+				map.put(Type.BODY, 11);
+			}), 9, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.FOX_AMBIENT),
+					() -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("udonmod:udon_kitsune_armor"))),
+					0f, 0f);
 			registerHelper.register(ResourceLocation.parse("udonmod:kitsune"), armorMaterial);
-			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
+			KITSUNE_ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
 	}
 
@@ -99,7 +101,7 @@ public abstract class KitsuneItem extends ArmorItem {
 	}
 
 	public KitsuneItem(Type type, Properties properties) {
-		super(ARMOR_MATERIAL, type, properties);
+		super(KITSUNE_ARMOR_MATERIAL, type, properties);
 	}
 
 	public static class Helmet extends KitsuneItem {
