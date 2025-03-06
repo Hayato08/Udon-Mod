@@ -3,13 +3,12 @@ package net.hayato08.udonmod;
 import net.hayato08.udonmod.block.UdonBlocks;
 import net.hayato08.udonmod.entity.UdonEntities;
 import net.hayato08.udonmod.entity.UdonEntityAttributes;
-import net.hayato08.udonmod.entity.client.WolFoxRenderer;
+import net.hayato08.udonmod.events.WolFoxEventHandler;
 import net.hayato08.udonmod.init.UdonModMenus;
 import net.hayato08.udonmod.item.UdonCreativeModeTabs;
 import net.hayato08.udonmod.item.UdonItems;
 import net.hayato08.udonmod.item.custom.KitsuneKatanaItem;
 import net.hayato08.udonmod.sound.UdonSounds;
-import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -59,6 +58,7 @@ public class UdonMod
         modEventBus.register(UdonEntityAttributes.class);
 
         NeoForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(WolFoxEventHandler.class);
 
         // レジストリの登録
         UdonCreativeModeTabs.register(modEventBus);
@@ -140,17 +140,20 @@ public class UdonMod
 
     }
 
+
+
     @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            event.enqueueWork(() -> {
-                EntityRenderers.register(UdonEntities.WOLFOX.get(), WolFoxRenderer::new);
-            });
+
         }
+
     }
+
+
 
     @SubscribeEvent
     public void tick(ServerTickEvent.Post event) {

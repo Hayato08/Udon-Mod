@@ -1,5 +1,7 @@
 package net.hayato08.udonmod.entity;
 
+import net.hayato08.udonmod.UdonMod;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -17,6 +19,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 import net.minecraft.world.entity.ai.goal.Goal;
+
 import java.util.EnumSet;
 
 
@@ -70,6 +73,14 @@ public class WolFoxEntity extends TamableAnimal {
     }
 
     @Override
+    public Component getDisplayName() {
+        if (this.hasCustomName()) {
+            return this.getCustomName();
+        }
+        return Component.translatable("entity." + UdonMod.MOD_ID + ".wolfox");
+    }
+
+    @Override
     public void setTarget(@Nullable LivingEntity target) {
         // 攻撃対象がWolfoxの場合は無視する
         if (target instanceof WolFoxEntity) {
@@ -80,11 +91,17 @@ public class WolFoxEntity extends TamableAnimal {
 
     @Override
     public boolean hurt(DamageSource source, float amount) {
-
+        // ダメージソースがプレイヤーの場合はダメージを受けない
+        if (source.getEntity() instanceof Player)
+        {
+            return true; // The attack "hit" but did no damage
+        }
+        // Keep existing logic for WolFox attackers
         if (source.getEntity() instanceof WolFoxEntity) {
             this.setTarget(null);
         }
-        // 必要に応じてダメージ処理の挙動を変更可能
+
+        // Process damage normally for non-player sources
         return super.hurt(source, amount);
     }
 
@@ -150,6 +167,4 @@ public class WolFoxEntity extends TamableAnimal {
             this.nextSoundTime--;
         }
     }
-
-    // 必要に応じてインタラクションやテイム処理をオーバーライドしてください
 }

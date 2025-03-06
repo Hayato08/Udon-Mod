@@ -25,11 +25,11 @@
   "item.udonmod.kitsune_chestplate": "キツネ型チェストプレート",
   "item.udonmod.kitsune_helmet": "キツネ型ヘルメット",
   "item.udonmod.kitsune_katana": "キツネ刀",
-
-
   "item.udonmod.iwashi": "いわし",
   "item.udonmod.dry_iwashi": "にぼし",
   "item.udonmod.udon_rope": "うどんロープ",
+
+  "entity.udonmod.wolfox": "狐狼",
 
 
   "block.udonmod.stone_mill": "石臼",

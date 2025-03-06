@@ -1,6 +1,5 @@
 package net.hayato08.udonmod.entity.client;
 
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.hayato08.udonmod.UdonMod;
@@ -35,7 +34,6 @@ public class WolFoxModel<T extends WolFoxEntity> extends EntityModel<T> {
         this.leg4 = root.getChild("left_front_leg");
         this.tail = root.getChild("tail");
     }
-
 
     public static LayerDefinition createBodyLayer() {
         MeshDefinition meshdefinition = new MeshDefinition();

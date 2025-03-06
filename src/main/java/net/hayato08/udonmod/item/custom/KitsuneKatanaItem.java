@@ -1,4 +1,3 @@
-// java
 package net.hayato08.udonmod.item.custom;
 
 import net.hayato08.udonmod.entity.UdonEntities;
@@ -30,6 +29,7 @@ public class KitsuneKatanaItem extends SwordItem {
     public KitsuneKatanaItem(Tier tier, float attackDamageModifier, float attackSpeedModifier, Item.Properties properties) {
         super(tier, properties);
     }
+
 
     @Override
     public boolean isCorrectToolForDrops(ItemStack stack, BlockState state) {
