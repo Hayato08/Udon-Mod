@@ -1,16 +1,18 @@
 // java
 package net.hayato08.udonmod.item.custom;
 
-import net.hayato08.udonmod.entity.KitsuneFoxEntity;
+import net.hayato08.udonmod.entity.UdonEntities;
+import net.hayato08.udonmod.entity.WolFoxEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.animal.Fox;
 import net.minecraft.world.level.Level;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.bus.api.SubscribeEvent;
 
@@ -21,30 +23,51 @@ import java.util.List;
 public class KitsuneKatanaItem extends SwordItem {
 
     private static int foxCounter = 0;
-    private static final List<KitsuneFoxEntity> spawnedFoxes = new ArrayList<>();
+    private static final int DESPAWN_TIME = 20 * 30; // 30 seconds
+    private static final int MAX_FOXES = 5;
+    private static final List<WolFoxEntity> spawnedFoxes = new ArrayList<>();
 
     public KitsuneKatanaItem(Tier tier, float attackDamageModifier, float attackSpeedModifier, Item.Properties properties) {
         super(tier, properties);
     }
 
     @Override
+    public boolean isCorrectToolForDrops(ItemStack stack, BlockState state) {
+        // 素手でブロックを破壊できるかどうか
+        if (state.requiresCorrectToolForDrops()) // ブロックを破壊できない（ドロップに適正なツールが必要）
+        {
+            return super.isCorrectToolForDrops(stack, state);
+        } else {
+            return true; // ブロックを破壊できる
+        }
+    }
+
+    @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         Level world = attacker.level();
         if (!world.isClientSide) {
-            Iterator<KitsuneFoxEntity> iterator = spawnedFoxes.iterator();
+            Iterator<WolFoxEntity> iterator = spawnedFoxes.iterator();
             while (iterator.hasNext()) {
-                KitsuneFoxEntity f = iterator.next();
+                WolFoxEntity f = iterator.next();
                 if (!f.isAlive()) {
                     iterator.remove();
                 }
             }
 
-            if (spawnedFoxes.size() < 5) {
-                KitsuneFoxEntity fox = new KitsuneFoxEntity(EntityType.WOLF, world);
+            if (spawnedFoxes.size() < MAX_FOXES) {
+                WolFoxEntity fox = new WolFoxEntity(UdonEntities.WOLFOX.get(), world);
                 if (fox != null) {
+                    // キツネをプレイヤーに飼いならす
+                    if (attacker instanceof Player player) {
+                        fox.tame(player);
+                    }
+
+                    // 攻撃したエンティティをキツネのターゲットに設定
+                    fox.setTarget(target);
+
                     CompoundTag data = fox.getPersistentData();
                     data.putInt("kitsuneID", foxCounter++);
-                    long despawnTime = world.getGameTime() + 600;
+                    long despawnTime = world.getGameTime() + DESPAWN_TIME;
                     data.putLong("despawnTime", despawnTime);
 
                     fox.moveTo(target.getX(), target.getY(), target.getZ(), target.getYRot(), target.getXRot());
@@ -58,9 +81,9 @@ public class KitsuneKatanaItem extends SwordItem {
 
     @SubscribeEvent
     public static void onServerTick(ServerTickEvent.Post event) {
-        Iterator<KitsuneFoxEntity> iterator = spawnedFoxes.iterator();
+        Iterator<WolFoxEntity> iterator = spawnedFoxes.iterator();
         while (iterator.hasNext()) {
-            KitsuneFoxEntity fox = iterator.next();
+            WolFoxEntity fox = iterator.next();
             if (!fox.isAlive()) {
                 iterator.remove();
                 continue;
