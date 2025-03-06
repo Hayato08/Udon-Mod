@@ -8,8 +8,11 @@ import net.hayato08.udonmod.init.UdonModMenus;
 import net.hayato08.udonmod.item.UdonCreativeModeTabs;
 import net.hayato08.udonmod.item.UdonItems;
 import net.hayato08.udonmod.item.custom.KitsuneKatanaItem;
+import net.hayato08.udonmod.particle.GraySplashParticle;
+import net.hayato08.udonmod.particle.UdonParticles;
 import net.hayato08.udonmod.sound.UdonSounds;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -67,6 +70,7 @@ public class UdonMod
         UdonModMenus.register(modEventBus);
         UdonSounds.register(modEventBus);
         UdonEntities.register(modEventBus);
+        UdonParticles.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
@@ -151,9 +155,12 @@ public class UdonMod
 
         }
 
+        @SubscribeEvent
+        public static void registerParticleProviders(RegisterParticleProvidersEvent event) {
+            event.registerSpriteSet(UdonParticles.GRAY_SPLASH.get(),
+                    GraySplashParticle.Provider::new);
+        }
     }
-
-
 
     @SubscribeEvent
     public void tick(ServerTickEvent.Post event) {

@@ -51,6 +51,11 @@ public class UdonCreativeModeTabs {
                     output.accept(UdonItems.KITSUNE_LEGGINGS);
                     output.accept(UdonItems.KITSUNE_BOOTS);
                     output.accept(UdonItems.KITSUNE_KATANA);
+                    output.accept(UdonItems.COLD_KATANA);
+                    output.accept(UdonItems.CURRY_KATANA);
+                    output.accept(UdonItems.BUKKAKE_KATANA);
+                    output.accept(UdonItems.ZARU_KATANA);
+
                 }))
 
                 .build());
@@ -71,7 +76,6 @@ public class UdonCreativeModeTabs {
                         output.accept(UdonItems.RICH_KITSUNE_UDON);
                         output.accept(UdonItems.ZARU_UDON);
                         output.accept(UdonItems.RICH_ZARU_UDON);
-
                     }))
 
                     .build());
