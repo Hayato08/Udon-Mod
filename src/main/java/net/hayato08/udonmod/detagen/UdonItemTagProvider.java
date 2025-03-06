@@ -46,5 +46,12 @@ public class UdonItemTagProvider extends ItemTagsProvider {
                 .add(UdonItems.KITSUNE_CHESTPLATE.get())
                 .add(UdonItems.KITSUNE_LEGGINGS.get())
                 .add(UdonItems.KITSUNE_BOOTS.get());
+
+        tag(UdonTags.Items.UDON_KATANA)
+                .add(UdonItems.ZARU_KATANA.get())
+                .add(UdonItems.CURRY_KATANA.get())
+                .add(UdonItems.BUKKAKE_KATANA.get())
+                .add(UdonItems.COLD_KATANA.get())
+                .add(UdonItems.KITSUNE_KATANA.get());
     }
 }

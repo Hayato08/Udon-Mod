@@ -62,6 +62,11 @@ public class UdonItemModelProvider extends ItemModelProvider {
         basicItem(UdonItems.BOILED_UDON.get());
         basicItem(UdonItems.OAGE.get());
         basicItem(UdonItems.KITSUNE_KATANA.get());
+        basicItem(UdonItems.COLD_KATANA.get());
+        basicItem(UdonItems.BUKKAKE_KATANA.get());
+        basicItem(UdonItems.ZARU_KATANA.get());
+        basicItem(UdonItems.CURRY_KATANA.get());
+
 
         trimmedArmorItem(UdonItems.KITSUNE_HELMET);
         trimmedArmorItem(UdonItems.KITSUNE_CHESTPLATE);

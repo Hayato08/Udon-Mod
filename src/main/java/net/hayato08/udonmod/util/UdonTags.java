@@ -23,6 +23,7 @@ public class UdonTags {
     public static class Items
     {
         public static final TagKey<Item> UDON_FOODS = createTag("udon_foods");
+        public static final TagKey<Item> UDON_KATANA = createTag("udon_katana");
         public static final TagKey<Item> UDON_CHANGEABL_TO_POWDER = createTag("udon_changeable_to_powder");
         private static TagKey<Item> createTag(String name)
         {

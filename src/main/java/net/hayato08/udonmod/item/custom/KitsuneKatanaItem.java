@@ -1,4 +1,3 @@
-// java
 package net.hayato08.udonmod.item.custom;
 
 import net.hayato08.udonmod.entity.UdonEntities;
@@ -27,9 +26,20 @@ public class KitsuneKatanaItem extends SwordItem {
     private static final int MAX_FOXES = 5;
     private static final List<WolFoxEntity> spawnedFoxes = new ArrayList<>();
 
-    public KitsuneKatanaItem(Tier tier, float attackDamageModifier, float attackSpeedModifier, Item.Properties properties) {
+    public KitsuneKatanaItem(Tier tier, Item.Properties properties) {
         super(tier, properties);
     }
+
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true;
+    }
+
+    @Override
+    public int getEnchantmentValue() {
+        return this.getTier().getEnchantmentValue(); // Ensures the enchantability value is used
+    }
+
 
     @Override
     public boolean isCorrectToolForDrops(ItemStack stack, BlockState state) {
@@ -46,13 +56,7 @@ public class KitsuneKatanaItem extends SwordItem {
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         Level world = attacker.level();
         if (!world.isClientSide) {
-            Iterator<WolFoxEntity> iterator = spawnedFoxes.iterator();
-            while (iterator.hasNext()) {
-                WolFoxEntity f = iterator.next();
-                if (!f.isAlive()) {
-                    iterator.remove();
-                }
-            }
+            spawnedFoxes.removeIf(f -> !f.isAlive());
 
             if (spawnedFoxes.size() < MAX_FOXES) {
                 WolFoxEntity fox = new WolFoxEntity(UdonEntities.WOLFOX.get(), world);

@@ -1,7 +1,10 @@
-// 1.21.1	2025-03-03T14:33:22.2125165	Item Models: udonmod
+// 1.21.1	2025-03-06T23:43:29.4413942	Item Models: udonmod
 ebaa01a0c6c40d29244802167fd367200e5fca3b assets/udonmod/models/item/boiled_udon.json
+fa1d31a73fe43e0fb9bfc9608f54de75b669405e assets/udonmod/models/item/bukkake_katana.json
 32b331c43972ad2e06f52cfd32f9dbdf9156598e assets/udonmod/models/item/bukkake_udon.json
+140b03e0c4e980b042530ca9d36239c33c037478 assets/udonmod/models/item/cold_katana.json
 d7bf10dd617cb8f9a1f0a6d8a5d149319af26c51 assets/udonmod/models/item/cold_udon.json
+b3efd36e76f3feb9fe7a1a954a2a8dcb1933f26d assets/udonmod/models/item/curry_katana.json
 f5018b26bbe105a08f5a3c2d64b2c3065e51b05f assets/udonmod/models/item/curry_udon.json
 3c4c418a9dcb2bceefe679fb372fec6288001bde assets/udonmod/models/item/dashi.json
 1dfc030b808e81bdbc8dc0b3c79d2e414ffb7416 assets/udonmod/models/item/dry_iwashi.json
@@ -67,4 +70,5 @@ bf01c8cdf2835fd3ec78b03ab3f316571de06616 assets/udonmod/models/item/rich_curry_u
 b9c103a8107938dbe829b668141ced3151e36fe2 assets/udonmod/models/item/rich_kitsune_udon.json
 7a2c388b83f4373e630c506480d3a42e0fc34a13 assets/udonmod/models/item/rich_zaru_udon.json
 61872794dac373821536b33f8af6d91cc76ec881 assets/udonmod/models/item/udon_rope.json
+aafcb0c0123c5d97e070b0f5961891accd7eee59 assets/udonmod/models/item/zaru_katana.json
 69e8aa9a3f90637bb4ad3fa6feba365493287819 assets/udonmod/models/item/zaru_udon.json

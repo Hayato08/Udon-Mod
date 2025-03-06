@@ -1,10 +1,7 @@
 package net.hayato08.udonmod.item;
 
 import net.hayato08.udonmod.UdonMod;
-import net.hayato08.udonmod.item.custom.KitsuneItem;
-import net.hayato08.udonmod.item.custom.KitsuneKatanaItem;
-import net.hayato08.udonmod.item.custom.ModArmorItem;
-import net.hayato08.udonmod.item.custom.UdonToolTiers;
+import net.hayato08.udonmod.item.custom.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -18,6 +15,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class UdonItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(UdonMod.MOD_ID);
+
+    public static final int ATTACK_DAMAGE_OF_COLD_KATANA = 4;
 
     public static final DeferredItem<Item> FLOUR =
             ITEMS.register("flour", () -> new Item(new Item.Properties()));
@@ -65,10 +64,40 @@ public class UdonItems {
             ITEMS.register("kitsune_katana", () ->
                     new KitsuneKatanaItem(
                             UdonToolTiers.KITSUNE,
-                            7,
-                            -2.4F,
-                            new Item.Properties().attributes(SwordItem.createAttributes(UdonToolTiers.KITSUNE, 7, -2.4F))
+                            new Item.Properties()
+                                    .attributes(SwordItem.createAttributes(UdonToolTiers.KITSUNE, 4, -2.4F))
                     )
+            );
+    // 武器（剣）cold_katana
+    public static final DeferredItem<SwordItem> COLD_KATANA =
+            ITEMS.register("cold_katana", () -> new ColdKatanaItem(
+                    UdonToolTiers.COLD,
+                    new Item.Properties()
+                    .attributes(SwordItem.createAttributes(UdonToolTiers.COLD, 6, -2.4F)))
+            );
+
+    // 武器（剣）cold_katana
+    public static final DeferredItem<SwordItem> ZARU_KATANA =
+            ITEMS.register("zaru_katana", () -> new ColdKatanaItem(
+                    UdonToolTiers.ZARU,
+                    new Item.Properties()
+                            .attributes(SwordItem.createAttributes(UdonToolTiers.ZARU ,3, -2.4F)))
+            );
+
+    // 武器（剣）cold_katana
+    public static final DeferredItem<SwordItem> BUKKAKE_KATANA =
+            ITEMS.register("bukkake_katana", () -> new BukkakeKatanaItem(
+                    UdonToolTiers.BUKKAKE,
+                    new Item.Properties()
+                            .attributes(SwordItem.createAttributes(UdonToolTiers.BUKKAKE, 3, -2.4F)))
+            );
+
+
+    public static final DeferredItem<SwordItem> CURRY_KATANA =
+            ITEMS.register("curry_katana", () -> new CurryKatanaItem(
+                    UdonToolTiers.CURRY,
+                    new Item.Properties()
+                            .attributes(SwordItem.createAttributes(UdonToolTiers.CURRY, 7, -2.4F)))
             );
 
     // armor items (防具)
