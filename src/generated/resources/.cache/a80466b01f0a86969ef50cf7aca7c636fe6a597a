@@ -1,4 +1,9 @@
-// 1.21.1	2025-03-06T23:43:29.4472777	Tags for minecraft:item mod id udonmod
+// 1.21.1	2025-03-10T15:34:08.5295861	Tags for minecraft:item mod id udonmod
+0287f71e59c8f0b75796353f4b4fd895f20f059c data/minecraft/tags/item/chest_armor.json
+af4e9fab9aee30e4aa28c93b4e63e1dc0c7a26e8 data/minecraft/tags/item/foot_armor.json
+42ab54a5e348b29eb2807bd89ccbae319270b7b4 data/minecraft/tags/item/head_armor.json
+c4181cce05fdd43482096744495316ad98d3aec1 data/minecraft/tags/item/leg_armor.json
+97bfaf7c3b572d9425c31fbeedf91291783c3e7b data/minecraft/tags/item/swords.json
 b0263fcc26eb691756f90bc994449a4af42bdbba data/minecraft/tags/item/trimmable_armor.json
 0b911cd1b234e6e76217d58ddd7413d6ecd983e7 data/udonmod/tags/item/udon_changeable_to_powder.json
 66f59753e9ac44720254fde573d58dc4cd82fc89 data/udonmod/tags/item/udon_foods.json
