@@ -24,12 +24,18 @@
   "item.udonmod.kitsune_boots": "キツネ型ブーツ",
   "item.udonmod.kitsune_chestplate": "キツネ型チェストプレート",
   "item.udonmod.kitsune_helmet": "キツネ型ヘルメット",
-  "item.udonmod.kitsune_katana": "キツネ刀",
   "item.udonmod.iwashi": "いわし",
   "item.udonmod.dry_iwashi": "にぼし",
   "item.udonmod.udon_rope": "うどんロープ",
 
+  "item.udonmod.kitsune_katana": "狐刀",
+  "item.udonmod.bukkake_katana": "ぶっかけ刀",
+  "item.udonmod.zaru_katana": "ざる刀",
+  "item.udonmod.cold_katana": "冷刀",
+  "item.udonmod.curry_katana": "カレー刀",
+
   "entity.udonmod.wolfox": "狐狼",
+
 
 
   "block.udonmod.stone_mill": "石臼",

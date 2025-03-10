@@ -53,5 +53,21 @@ public class UdonItemTagProvider extends ItemTagsProvider {
                 .add(UdonItems.BUKKAKE_KATANA.get())
                 .add(UdonItems.COLD_KATANA.get())
                 .add(UdonItems.KITSUNE_KATANA.get());
+
+        tag(ItemTags.SWORDS)
+                .add(UdonItems.KITSUNE_KATANA.get())
+                .add(UdonItems.ZARU_KATANA.get())
+                .add(UdonItems.COLD_KATANA.get())
+                .add(UdonItems.CURRY_KATANA.get())
+                .add(UdonItems.BUKKAKE_KATANA.get());
+
+        tag(ItemTags.HEAD_ARMOR)
+                .add(UdonItems.KITSUNE_HELMET.get());
+        tag(ItemTags.CHEST_ARMOR)
+                .add(UdonItems.KITSUNE_CHESTPLATE.get());
+        tag(ItemTags.LEG_ARMOR)
+                .add(UdonItems.KITSUNE_LEGGINGS.get());
+        tag(ItemTags.FOOT_ARMOR)
+                .add(UdonItems.KITSUNE_BOOTS.get());
     }
 }
