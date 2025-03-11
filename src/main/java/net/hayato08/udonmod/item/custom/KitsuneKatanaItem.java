@@ -1,7 +1,7 @@
 package net.hayato08.udonmod.item.custom;
 
 import net.hayato08.udonmod.entity.UdonEntities;
-import net.hayato08.udonmod.entity.WolFoxEntity;
+import net.hayato08.udonmod.entity.custom.WolFoxEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;

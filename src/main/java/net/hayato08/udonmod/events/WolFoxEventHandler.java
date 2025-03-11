@@ -1,7 +1,7 @@
 package net.hayato08.udonmod.events;
 
 import net.hayato08.udonmod.UdonMod;
-import net.hayato08.udonmod.entity.WolFoxEntity;
+import net.hayato08.udonmod.entity.custom.WolFoxEntity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.neoforged.bus.api.SubscribeEvent;

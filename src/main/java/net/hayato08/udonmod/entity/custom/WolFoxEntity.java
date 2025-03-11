@@ -1,4 +1,4 @@
-package net.hayato08.udonmod.entity;
+package net.hayato08.udonmod.entity.custom;
 
 import net.hayato08.udonmod.UdonMod;
 import net.minecraft.network.chat.Component;
@@ -105,6 +105,8 @@ public class WolFoxEntity extends TamableAnimal {
         return super.hurt(source, amount);
     }
 
+
+
     @Override
     public boolean isFood(ItemStack itemStack) {
         return false;
@@ -150,6 +152,8 @@ public class WolFoxEntity extends TamableAnimal {
                 return this.nextSoundTime <= 0;
             }
         }
+
+
 
         @Override
         public boolean canContinueToUse() {

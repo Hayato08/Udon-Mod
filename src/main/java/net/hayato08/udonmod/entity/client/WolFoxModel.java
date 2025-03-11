@@ -3,7 +3,7 @@ package net.hayato08.udonmod.entity.client;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.hayato08.udonmod.UdonMod;
-import net.hayato08.udonmod.entity.WolFoxEntity;
+import net.hayato08.udonmod.entity.custom.WolFoxEntity;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
