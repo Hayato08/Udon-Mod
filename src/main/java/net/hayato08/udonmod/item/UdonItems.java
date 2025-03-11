@@ -1,6 +1,7 @@
 package net.hayato08.udonmod.item;
 
 import net.hayato08.udonmod.UdonMod;
+import net.hayato08.udonmod.entity.UdonEntities;
 import net.hayato08.udonmod.item.custom.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -8,8 +9,8 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tiers;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -61,11 +62,10 @@ public class UdonItems {
 
     // 武器（剣）kitsune_katana
     public static final DeferredItem<SwordItem> KITSUNE_KATANA =
-            ITEMS.register("kitsune_katana", () ->
-                    new KitsuneKatanaItem(
-                            UdonToolTiers.KITSUNE,
-                            new Item.Properties()
-                                    .attributes(SwordItem.createAttributes(UdonToolTiers.KITSUNE, 4, -2.4F))
+            ITEMS.register("kitsune_katana", () -> new KitsuneKatanaItem(
+                    UdonToolTiers.KITSUNE,
+                    new Item.Properties()
+                        .attributes(SwordItem.createAttributes(UdonToolTiers.KITSUNE, 4, -2.4F))
                     )
             );
     // 武器（剣）cold_katana
@@ -73,12 +73,12 @@ public class UdonItems {
             ITEMS.register("cold_katana", () -> new ColdKatanaItem(
                     UdonToolTiers.COLD,
                     new Item.Properties()
-                    .attributes(SwordItem.createAttributes(UdonToolTiers.COLD, 6, -2.4F)))
+                            .attributes(SwordItem.createAttributes(UdonToolTiers.COLD, 6, -2.4F)))
             );
 
     // 武器（剣）cold_katana
     public static final DeferredItem<SwordItem> ZARU_KATANA =
-            ITEMS.register("zaru_katana", () -> new ColdKatanaItem(
+            ITEMS.register("zaru_katana", () -> new ZaruKatanaItem(
                     UdonToolTiers.ZARU,
                     new Item.Properties()
                             .attributes(SwordItem.createAttributes(UdonToolTiers.ZARU ,3, -2.4F)))
@@ -92,7 +92,7 @@ public class UdonItems {
                             .attributes(SwordItem.createAttributes(UdonToolTiers.BUKKAKE, 3, -2.4F)))
             );
 
-
+    // 武器（剣）cold_katana
     public static final DeferredItem<SwordItem> CURRY_KATANA =
             ITEMS.register("curry_katana", () -> new CurryKatanaItem(
                     UdonToolTiers.CURRY,
@@ -102,20 +102,78 @@ public class UdonItems {
 
     // armor items (防具)
     public static final DeferredItem<ArmorItem> KITSUNE_HELMET =
-            ITEMS.register("kitsune_helmet",() -> new ModArmorItem(KitsuneItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            ITEMS.register("kitsune_helmet",() -> new ModArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> KITSUNE_CHESTPLATE =
-            ITEMS.register("kitsune_chestplate",() -> new ModArmorItem(KitsuneItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE ,
+            ITEMS.register("kitsune_chestplate",() -> new ModArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE ,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE .getDurability(19))));
 
     public static final DeferredItem<ArmorItem> KITSUNE_LEGGINGS =
-            ITEMS.register("kitsune_leggings",() -> new ModArmorItem(KitsuneItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+            ITEMS.register("kitsune_leggings",() -> new ModArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> KITSUNE_BOOTS =
-            ITEMS.register("kitsune_boots",() -> new ModArmorItem(KitsuneItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+            ITEMS.register("kitsune_boots",() -> new ModArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+/*
+    // ZARU_ARMOR
+    public static final DeferredItem<ArmorItem> ZARU_HELMET =
+            ITEMS.register("zaru_helmet",() -> new ModArmorItem(ZaruArmorItem.ZARU_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+    public static final DeferredItem<ArmorItem> ZARU_CHESTPLATE =
+            ITEMS.register("zaru_chestplate",() -> new ModArmorItem(ZaruArmorItem.ZARU_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+    public static final DeferredItem<ArmorItem> ZARU_LEGGINGS =
+            ITEMS.register("zaru_leggings",() -> new ModArmorItem(ZaruArmorItemItem.ZARU_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+    public static final DeferredItem<ArmorItem> ZARU_BOOTS =
+            ITEMS.register("zaru_boots",() -> new ModArmorItem(ZaruArmorItemItem.ZARU_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
+    // BUKKAKE_ARMOR
+    public static final DeferredItem<ArmorItem> BUKKAKE_HELMET =
+            ITEMS.register("bukkake_helmet",() -> new ModArmorItem(BukkakeItem.BUKKAKE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+    public static final DeferredItem<ArmorItem> BUKKAKE_CHESTPLATE =
+            ITEMS.register("bukkake_chestplate",() -> new ModArmorItem(BukkakeItem.BUKKAKE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+    public static final DeferredItem<ArmorItem> BUKKAKE_LEGGINGS =
+            ITEMS.register("bukkake_leggings",() -> new ModArmorItem(BukkakeItem.BUKKAKE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+    public static final DeferredItem<ArmorItem> BUKKAKE_BOOTS =
+            ITEMS.register("bukkake_boots",() -> new ModArmorItem(BukkakeItem.BUKKAKE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
+    // CURRY_ARMOR
+    public static final DeferredItem<ArmorItem> CURRY_HELMET =
+            ITEMS.register("curry_helmet",() -> new ModArmorItem(CurryItem.CURRY_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+    public static final DeferredItem<ArmorItem> CURRY_CHESTPLATE =
+            ITEMS.register("curry_chestplate",() -> new ModArmorItem(CurryItem.CURRY_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+    public static final DeferredItem<ArmorItem> CURRY_LEGGINGS =
+            ITEMS.register("curry_leggings",() -> new ModArmorItem(CurryItem.CURRY_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+    public static final DeferredItem<ArmorItem> CURRY_BOOTS =
+            ITEMS.register("curry_boots",() -> new ModArmorItem(CurryItem.CURRY_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
+    // COLD_ARMOR
+    public static final DeferredItem<ArmorItem> COLD_HELMET =
+            ITEMS.register("cold_helmet",() -> new ModArmorItem(ColdItem.COLD_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+    public static final DeferredItem<ArmorItem> COLD_CHESTPLATE =
+            ITEMS.register("cold_chestplate",() -> new ModArmorItem(ColdItem.COLD_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+    public static final DeferredItem<ArmorItem> COLD_LEGGINGS =
+            ITEMS.register("cold_leggings",() -> new ModArmorItem(ColdItem.COLD_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+    public static final DeferredItem<ArmorItem> COLD_BOOTS =
+            ITEMS.register("cold_boots",() -> new ModArmorItem(ColdItem.COLD_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
+ */
 
     // 食料（食べ物）
     // ぶっかけうどん
@@ -197,6 +255,13 @@ public class UdonItems {
                     .effect(new MobEffectInstance(MobEffects.DIG_SPEED, 1200*4, 0), 1.0F) // 採掘速度上昇 5分間
                     .fast()
                     .build())));
+
+    // スポーンエッグ
+    public static final DeferredItem<Item> WOLFOX_SPAWN_EGG =
+            ITEMS.register("wolfox_spawn_egg", () -> new DeferredSpawnEggItem(UdonEntities.WOLFOX, -1, -1, new Item.Properties()));
+
+    public static final DeferredItem<Item> KATSUO_SPWAN_EGG =
+            ITEMS.register("katsuo_spawn_egg", () -> new DeferredSpawnEggItem(UdonEntities.KATSUO, -1, -1, new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

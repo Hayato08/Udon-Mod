@@ -35,9 +35,7 @@ public class UdonCreativeModeTabs {
                         output.accept(UdonItems.BOILED_UDON);
                         output.accept(UdonItems.OAGE);
                         output.accept(UdonItems.ICE_UDON);
-                    }))
-
-                    .build());
+                    })).build());
 
     // 武器・防具のタブ
     public static final Supplier<CreativeModeTab> UDON_TOOLS_TAB = CREATIVE_MODE_TAB.register("udon_tools_tab",
@@ -56,9 +54,7 @@ public class UdonCreativeModeTabs {
                     output.accept(UdonItems.BUKKAKE_KATANA);
                     output.accept(UdonItems.ZARU_KATANA);
 
-                }))
-
-                .build());
+                })).build());
 
     public static final Supplier<CreativeModeTab> UDON_FOODS_TAB = CREATIVE_MODE_TAB.register("udon_foods_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(UdonItems.BUKKAKE_UDON.get())) // タブのアイコン
@@ -76,9 +72,7 @@ public class UdonCreativeModeTabs {
                         output.accept(UdonItems.RICH_KITSUNE_UDON);
                         output.accept(UdonItems.ZARU_UDON);
                         output.accept(UdonItems.RICH_ZARU_UDON);
-                    }))
-
-                    .build());
+                    })).build());
 
     public static final Supplier<CreativeModeTab> UDON_FUNCTIONAL_BLOCKS_TAB = CREATIVE_MODE_TAB.register("udon_functional_blocks_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(UdonBlocks.STONE_MILL.get())) // タブのアイコン
@@ -87,9 +81,7 @@ public class UdonCreativeModeTabs {
                     .displayItems(((itemDisplayParameters, output) -> // そのタブに表示するアイテム
                     {
                         output.accept(UdonBlocks.STONE_MILL);
-                    }))
-
-                    .build());
+                    })).build());
 
     public static void register(IEventBus eventBus)
     {

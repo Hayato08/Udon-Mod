@@ -32,7 +32,7 @@ import java.util.List;
 import java.util.Map;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
-public abstract class KitsuneItem extends ArmorItem {
+public abstract class KitsuneArmorItem extends ArmorItem {
 	public static Holder<ArmorMaterial> KITSUNE_ARMOR_MATERIAL = null;
 
 	@SubscribeEvent
@@ -100,51 +100,9 @@ public abstract class KitsuneItem extends ArmorItem {
 		}, UdonItems.KITSUNE_BOOTS.get());
 	}
 
-	public KitsuneItem(Type type, Properties properties) {
+	public KitsuneArmorItem(Type type, Properties properties) {
 		super(KITSUNE_ARMOR_MATERIAL, type, properties);
 	}
 
-	public static class Helmet extends KitsuneItem {
-		public Helmet() {
-			super(Type.HELMET, new Properties().durability(Type.HELMET.getDurability(15)));
-		}
 
-		@Override
-		public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, ArmorMaterial.Layer layer, boolean innerModel) {
-			return ResourceLocation.parse("udonmod:textures/entities/kitsune_layer_1.png");
-		}
-	}
-
-	public static class Chestplate extends KitsuneItem {
-		public Chestplate() {
-			super(Type.CHESTPLATE, new Properties().durability(Type.CHESTPLATE.getDurability(15)));
-		}
-
-		@Override
-		public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, ArmorMaterial.Layer layer, boolean innerModel) {
-			return ResourceLocation.parse("udonmod:textures/entities/kitsune_layer_1.png");
-		}
-	}
-
-	public static class Leggings extends KitsuneItem {
-		public Leggings() {
-			super(Type.LEGGINGS, new Properties().durability(Type.LEGGINGS.getDurability(15)));
-		}
-
-		@Override
-		public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, ArmorMaterial.Layer layer, boolean innerModel) {
-			return ResourceLocation.parse("udonmod:textures/entities/kitsune_layer2.png");
-		}
-	}
-
-	public static class Boots extends KitsuneItem {
-		public Boots() {
-			super(Type.BOOTS, new Properties().durability(Type.BOOTS.getDurability(15)));
-		}
-
-		@Override
-		public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, ArmorMaterial.Layer layer, boolean innerModel) {
-			return ResourceLocation.parse("udonmod:textures/entities/kitsune_layer_1.png");
-		}
-	}
 }

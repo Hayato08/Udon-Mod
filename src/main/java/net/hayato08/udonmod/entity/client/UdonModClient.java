@@ -1,6 +1,7 @@
 package net.hayato08.udonmod.entity.client;
 
 import net.hayato08.udonmod.UdonMod;
+import net.hayato08.udonmod.client.renderer.WolFoxRenderer;
 import net.hayato08.udonmod.entity.UdonEntities;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.api.distmarker.Dist;

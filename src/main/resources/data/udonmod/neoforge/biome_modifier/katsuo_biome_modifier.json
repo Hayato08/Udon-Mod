@@ -1,0 +1,12 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": {
+    "type": "neoforge:any"
+  },
+  "spawners": {
+    "type": "udonmod:katsuo",
+    "weight": 30,
+    "minCount": 10,
+    "maxCount": 15
+  }
+}

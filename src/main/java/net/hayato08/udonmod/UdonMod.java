@@ -136,6 +136,11 @@ public class UdonMod
         {
             event.accept(UdonBlocks.STONE_MILL);
         }
+        else if(event.getTabKey() == CreativeModeTabs.SPAWN_EGGS)
+        {
+            event.accept(UdonItems.WOLFOX_SPAWN_EGG.get());
+            event.accept(UdonItems.KATSUO_SPWAN_EGG.get());
+        }
     }
 
     @SubscribeEvent

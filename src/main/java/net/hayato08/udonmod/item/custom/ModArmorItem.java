@@ -21,7 +21,7 @@ public class ModArmorItem extends ArmorItem {
     // MobEffectInstance(効果, 適用時間（ティック単位）, レベル0,1,...（移動速度上昇１or 移動速度上昇２みたいな感じ）, 効果がついているのを視覚的にわかるようにするか（体から泡が出るか）)
     private static final Map<Holder<ArmorMaterial>, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<Holder<ArmorMaterial>, List<MobEffectInstance>>())
-                    .put(KitsuneItem.KITSUNE_ARMOR_MATERIAL,
+                    .put(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL,
                             List.of(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0, false, false)))
                     .build();
 

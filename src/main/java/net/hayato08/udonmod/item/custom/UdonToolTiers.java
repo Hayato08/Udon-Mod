@@ -9,19 +9,19 @@ import net.neoforged.neoforge.common.SimpleTier;
 public class UdonToolTiers {
     // Increase enchantability for KITSUNE (from 1 to a higher value like 15)
     public static final Tier KITSUNE = new SimpleTier(UdonTags.Blocks.INCCORECT_FOR_UDON_TOOL,
-            1400, 4f, 3f, 15, () -> Ingredient.of(UdonItems.OAGE));
+            2000, 4f, 3f, 28, () -> Ingredient.of(UdonItems.OAGE));
 
     public static final Tier COLD = new SimpleTier(UdonTags.Blocks.INCCORECT_FOR_UDON_TOOL,
-            1400, 4f, 0f, 28, () -> Ingredient.of(UdonItems.ICE_UDON));
+            2000, 4f, 0f, 28, () -> Ingredient.of(UdonItems.ICE_UDON));
 
     // Fix the repair material for CURRY
     public static final Tier CURRY = new SimpleTier(UdonTags.Blocks.INCCORECT_FOR_UDON_TOOL,
-            1400, 4f, 0f, 28, () -> Ingredient.of(UdonItems.CURRY_UDON)); // Change to CURRY_UDON
+            2000, 4f, 0f, 28, () -> Ingredient.of(UdonItems.CURRY_UDON)); // Change to CURRY_UDON
 
     // Fix the repair material for BUKKAKE
     public static final Tier BUKKAKE = new SimpleTier(UdonTags.Blocks.INCCORECT_FOR_UDON_TOOL,
-            1400, 4f, 0f, 28, () -> Ingredient.of(UdonItems.BUKKAKE_UDON)); // Change to BUKKAKE_UDON
+            2000, 4f, 0f, 28, () -> Ingredient.of(UdonItems.BUKKAKE_UDON));
 
     public static final Tier ZARU = new SimpleTier(UdonTags.Blocks.INCCORECT_FOR_UDON_TOOL,
-            1400, 4f, 3.0f, 28, () -> Ingredient.of(UdonItems.ICE_UDON));
+            2000, 4f, 3.0f, 28, () -> Ingredient.of(UdonItems.ICE_UDON));
 }
