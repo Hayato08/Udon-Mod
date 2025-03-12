@@ -16,6 +16,11 @@ import java.util.function.Supplier;
 // ボタンが押されたらこのクラスのexecuteメソッドが呼び出される
 public class StoneMillItemChangerProcedure
 {
+
+	private static final int FLOUR_MAGNIFICATION = 1;
+	private static final int KATSUO_MAGNIFICATION = 4;
+	private static final int IWASHI_MAGNIFICATION = 4;
+
 	public static void execute(Entity entity)
 	{
 		if (entity == null)
@@ -42,13 +47,13 @@ public class StoneMillItemChangerProcedure
 				if ((entity instanceof Player pPpayerSlotItem && pPpayerSlotItem.containerMenu instanceof Supplier pSupplier &&
 						pSupplier.get() instanceof Map pSlot ? ((Slot) pSlot.get(1)).getItem() : ItemStack.EMPTY).getItem() == UdonItems.FLOUR.get())
 				{
-					itemCanger(entity, pSetstack, slot0, slot1);
+					itemCanger(entity, pSetstack, slot0, slot1, FLOUR_MAGNIFICATION);
 				}
 			}
 			else // スロット１にアイテムがないとき
 			{
 				// アイテムを変換
-				itemCanger(entity, pSetstack, slot0, slot1);
+				itemCanger(entity, pSetstack, slot0, slot1, FLOUR_MAGNIFICATION);
 			}
 		}
 		// かつお節を削り鰹節にする
@@ -66,13 +71,13 @@ public class StoneMillItemChangerProcedure
 				if ((entity instanceof Player pPpayerSlotItem && pPpayerSlotItem.containerMenu instanceof Supplier pSupplier &&
 						pSupplier.get() instanceof Map pSlot ? ((Slot) pSlot.get(1)).getItem() : ItemStack.EMPTY).getItem() == UdonItems.KATSUO_FLAKES.get())
 				{
-					itemCanger(entity, pSetstack, slot0, slot1);
+					itemCanger(entity, pSetstack, slot0, slot1, KATSUO_MAGNIFICATION);
 				}
 			}
 			else // スロット１にアイテムがないとき
 			{
 				// アイテムを変換
-				itemCanger(entity, pSetstack, slot0, slot1);
+				itemCanger(entity, pSetstack, slot0, slot1, KATSUO_MAGNIFICATION);
 			}
 		}
 		// いわしを削りいわしにする
@@ -90,13 +95,13 @@ public class StoneMillItemChangerProcedure
 				if ((entity instanceof Player pPpayerSlotItem && pPpayerSlotItem.containerMenu instanceof Supplier pSupplier &&
 						pSupplier.get() instanceof Map pSlot ? ((Slot) pSlot.get(1)).getItem() : ItemStack.EMPTY).getItem() == UdonItems.IWASHI_FLAKES.get())
 				{
-					itemCanger(entity, pSetstack, slot0, slot1);
+					itemCanger(entity, pSetstack, slot0, slot1, IWASHI_MAGNIFICATION);
 				}
 			}
 			else // スロット１にアイテムがないとき
 			{
 				// アイテムを変換
-				itemCanger(entity, pSetstack, slot0, slot1);
+				itemCanger(entity, pSetstack, slot0, slot1, IWASHI_MAGNIFICATION);
 			}
 		}
 	}
@@ -124,9 +129,9 @@ public class StoneMillItemChangerProcedure
 			 itemCanger(entity, pSetstack, slot0, slot1, true);
 	*/
 
-	private static void itemCanger(Entity entity, ItemStack pSetstack, double slot0, double slot1)
+	private static void itemCanger(Entity entity, ItemStack pSetstack, double slot0, double slot1, int magnification)
 	{
-		if(slot0 + slot1 <= 64)
+		if((slot0 * magnification) + slot1 <= 64) // スロット0とスロット1の合計値が64以下のとき
 		{
 			if (entity instanceof Player pPlayer) {
 				playStoneMillSound(pPlayer);
@@ -134,21 +139,22 @@ public class StoneMillItemChangerProcedure
 			if (entity instanceof Player pPlayer && pPlayer.containerMenu instanceof Supplier _current && _current.get() instanceof Map pSlots)
 			{
 
-				((Slot) pSlots.get(0)).remove((int) slot0); // スロット０のアイテムを削除
-				pSetstack.setCount((int) (slot0 + slot1)); // スロット０にあった個数分、スロット1にアイテムを追加
+				((Slot) pSlots.get(0)).remove((int) slot0 * magnification); // スロット０のアイテムを削除
+				pSetstack.setCount((int) ((slot0 * magnification) + slot1)); // スロット０にあった個数分、スロット1にアイテムを追加
 				((Slot) pSlots.get(1)).set(pSetstack);
 				pPlayer.containerMenu.broadcastChanges();
 			}
 		}
-		else if(slot0 + slot1 > 64 && slot1 != 64)
+		else if((slot0 * magnification) + slot1 > 64 && slot1 != 64)
 		{
 			if (entity instanceof Player pPlayer) {
 				playStoneMillSound(pPlayer);
 			}
 			if (entity instanceof Player pPlayer && pPlayer.containerMenu instanceof Supplier _current && _current.get() instanceof Map pSlots)
 			{
-				((Slot) pSlots.get(0)).remove((int) (64 - slot1)); // スロット１にあるアイテムの個数と64との差分をスロット０から削除
-				pSetstack.setCount(64); // スロット１に64個のアイテムを追加
+				int num = (int) (64 - slot1) / magnification;
+				((Slot) pSlots.get(0)).remove(num); // スロット０からスロット１に移動するアイテムの個数を削除
+				pSetstack.setCount(getAmount(entity, 1) + num * magnification); // スロット０からスロット１に移動するアイテムの個数を設定
 				((Slot) pSlots.get(1)).set(pSetstack);
 				pPlayer.containerMenu.broadcastChanges();
 			}
