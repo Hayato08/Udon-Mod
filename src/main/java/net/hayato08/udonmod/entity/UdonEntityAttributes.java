@@ -11,6 +11,8 @@ public class UdonEntityAttributes {
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(UdonEntities.KATSUO.get(), WolFoxEntity.createFoxAttributes().build());
+        event.put(UdonEntities.IWASHI.get(), WolFoxEntity.createFoxAttributes().build());
         event.put(UdonEntities.WOLFOX.get(), WolFoxEntity.createFoxAttributes().build());
+
     }
 }

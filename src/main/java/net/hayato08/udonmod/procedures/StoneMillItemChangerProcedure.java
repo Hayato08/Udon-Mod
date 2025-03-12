@@ -75,6 +75,30 @@ public class StoneMillItemChangerProcedure
 				itemCanger(entity, pSetstack, slot0, slot1);
 			}
 		}
+		// いわしを削りいわしにする
+		else if ((entity instanceof Player pPlayerSlotItem && pPlayerSlotItem.containerMenu instanceof Supplier pSupplier &&
+				pSupplier.get() instanceof Map pSlot ? ((Slot) pSlot.get(0)).getItem() : ItemStack.EMPTY).getItem() == UdonItems.DRY_IWASHI.get())
+		{
+			slot0 = getAmount(entity, 0); // スロット0にあるアイテムの個数
+			slot1 = getAmount(entity, 1); // スロット1にあるアイテムの個数
+
+			ItemStack pSetstack = new ItemStack(UdonItems.IWASHI_FLAKES.get()).copy(); // 変換するアイテムを取得
+
+			if(slot1 != 0) //スロット１に何かアイテムがあるとき
+			{
+				// スロット１のアイテムが削りいわしのとき
+				if ((entity instanceof Player pPpayerSlotItem && pPpayerSlotItem.containerMenu instanceof Supplier pSupplier &&
+						pSupplier.get() instanceof Map pSlot ? ((Slot) pSlot.get(1)).getItem() : ItemStack.EMPTY).getItem() == UdonItems.IWASHI_FLAKES.get())
+				{
+					itemCanger(entity, pSetstack, slot0, slot1);
+				}
+			}
+			else // スロット１にアイテムがないとき
+			{
+				// アイテムを変換
+				itemCanger(entity, pSetstack, slot0, slot1);
+			}
+		}
 	}
 
 	// 石臼使用時の音を再生
