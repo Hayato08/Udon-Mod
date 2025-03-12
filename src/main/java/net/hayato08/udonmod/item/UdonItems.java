@@ -44,6 +44,7 @@ public class UdonItems {
     // 鰹節
     public static final DeferredItem<Item> DRY_KATSUO =
             ITEMS.register("dry_katsuo", () -> new Item(new Item.Properties()));
+    // いわしフレークス
     public static final DeferredItem<Item> IWASHI_FLAKES =
             ITEMS.register("iwashi_flakes", () -> new Item(new Item.Properties()));
     // 削り鰹節

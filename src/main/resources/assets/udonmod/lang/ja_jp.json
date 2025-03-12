@@ -24,6 +24,7 @@
   "item.udonmod.kitsune_boots": "キツネ型ブーツ",
   "item.udonmod.kitsune_chestplate": "キツネ型チェストプレート",
   "item.udonmod.kitsune_helmet": "キツネ型ヘルメット",
+  "item.udonmod.iwashi_flakes": "魚粉",
   "item.udonmod.iwashi": "いわし",
   "item.udonmod.dry_iwashi": "にぼし",
   "item.udonmod.udon_rope": "うどんロープ",
@@ -36,14 +37,12 @@
 
   "entity.udonmod.wolfox": "狐狼",
 
-
-
   "block.udonmod.stone_mill": "石臼",
 
   "gui.udonmod.stone_mill_gui.button_mill": "製粉",
 
   "creativetab.udonmod.udon_items": "うどんアイテム",
   "creativetab.udonmod.udon_tools": "うどんツール",
-  "creativetab.udonmod.udon_foods": "うどん"
+  "creativetab.udonmod.udon_foods": "各種うどん"
 
 }

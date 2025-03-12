@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-06T23:43:29.4413942	Item Models: udonmod
+// 1.21.1	2025-03-13T04:37:06.9774604	Item Models: udonmod
 ebaa01a0c6c40d29244802167fd367200e5fca3b assets/udonmod/models/item/boiled_udon.json
 fa1d31a73fe43e0fb9bfc9608f54de75b669405e assets/udonmod/models/item/bukkake_katana.json
 32b331c43972ad2e06f52cfd32f9dbdf9156598e assets/udonmod/models/item/bukkake_udon.json
@@ -13,6 +13,7 @@ f5018b26bbe105a08f5a3c2d64b2c3065e51b05f assets/udonmod/models/item/curry_udon.j
 658a348f32b490fef64a51008fc09c6b28388cc0 assets/udonmod/models/item/flour.json
 eeea04e5f4283389cc3e35d38566fe1a4c9fe79c assets/udonmod/models/item/ice_udon.json
 c69b8bd9ccb2abbc5d22f5b268bf8bdb2cd0a12c assets/udonmod/models/item/iwashi.json
+361fc1d1b9139341a061663867cd27764fed4647 assets/udonmod/models/item/iwashi_flakes.json
 8b84a994672248c70e9b14d3ec84a7f7b3b3fc37 assets/udonmod/models/item/katsuo.json
 d472814a69b658d17f6e3f52ae3c63a6ffcd5a67 assets/udonmod/models/item/katsuo_flakes.json
 4aed849f757ef655403bf75cd23a163a6e3cce82 assets/udonmod/models/item/kitsune_boots.json

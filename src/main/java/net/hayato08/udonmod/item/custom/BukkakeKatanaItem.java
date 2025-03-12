@@ -15,6 +15,7 @@ import net.minecraft.world.phys.Vec3;
 import java.util.Random;
 
 public class BukkakeKatanaItem extends SwordItem {
+    private static final int PARTICLE_COUNT = 80;
     private final Random random = new Random();
 
     public BukkakeKatanaItem(Tier tier, Properties properties) {
@@ -31,21 +32,17 @@ public class BukkakeKatanaItem extends SwordItem {
         return this.getTier().getEnchantmentValue(); // Ensures the enchantability value is used
     }
 
-    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
-        return enchantment.canEnchant(stack) ||
-                enchantment.canEnchant(Items.DIAMOND_SWORD.getDefaultInstance());
-    }
+
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        // Apply poison effect
+        // 毒を与える
         target.addEffect(new MobEffectInstance(MobEffects.POISON, 20 * 15, 1));
 
-        // Create gray splash particles
+        // パーティクルを生成
         if (target.level() instanceof ServerLevel serverLevel) {
             Vec3 position = target.position().add(0, target.getBbHeight() / 2, 0);
 
-            // Generate gray splash particles around the entity
-            for (int i = 0; i < 20; i++) {
+            for (int i = 0; i < PARTICLE_COUNT; i++) {
                 double offsetX = random.nextDouble() - 0.5;
                 double offsetY = random.nextDouble() * 0.5;
                 double offsetZ = random.nextDouble() - 0.5;
