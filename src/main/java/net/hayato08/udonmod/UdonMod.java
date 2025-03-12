@@ -140,6 +140,7 @@ public class UdonMod
         {
             event.accept(UdonItems.WOLFOX_SPAWN_EGG.get());
             event.accept(UdonItems.KATSUO_SPWAN_EGG.get());
+            event.accept(UdonItems.IWASHI_SPAWN_EGG.get());
         }
     }
 

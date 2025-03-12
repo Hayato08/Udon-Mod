@@ -44,6 +44,8 @@ public class UdonItems {
     // 鰹節
     public static final DeferredItem<Item> DRY_KATSUO =
             ITEMS.register("dry_katsuo", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> IWASHI_FLAKES =
+            ITEMS.register("iwashi_flakes", () -> new Item(new Item.Properties()));
     // 削り鰹節
     public static final DeferredItem<Item> KATSUO_FLAKES =
             ITEMS.register("katsuo_flakes", () -> new Item(new Item.Properties()));
@@ -262,6 +264,9 @@ public class UdonItems {
 
     public static final DeferredItem<Item> KATSUO_SPWAN_EGG =
             ITEMS.register("katsuo_spawn_egg", () -> new DeferredSpawnEggItem(UdonEntities.KATSUO, -1, -1, new Item.Properties()));
+
+    public static final DeferredItem<Item> IWASHI_SPAWN_EGG =
+            ITEMS.register("iwashi_spawn_egg", () -> new DeferredSpawnEggItem(UdonEntities.IWASHI, -1, -1, new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

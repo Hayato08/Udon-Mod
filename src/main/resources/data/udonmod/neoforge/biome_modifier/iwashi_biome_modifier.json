@@ -4,9 +4,9 @@
     "type": "neoforge:any"
   },
   "spawners": {
-    "type": "udonmod:katsuo",
+    "type": "udonmod:iwashi",
     "weight": 30,
-    "minCount": 5,
-    "maxCount": 10
+    "minCount": 10,
+    "maxCount": 15
   }
 }
