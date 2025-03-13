@@ -40,18 +40,6 @@ public class KitsuneKatanaItem extends SwordItem {
         return this.getTier().getEnchantmentValue(); // Ensures the enchantability value is used
     }
 
-
-    @Override
-    public boolean isCorrectToolForDrops(ItemStack stack, BlockState state) {
-        // 素手でブロックを破壊できるかどうか
-        if (state.requiresCorrectToolForDrops()) // ブロックを破壊できない（ドロップに適正なツールが必要）
-        {
-            return super.isCorrectToolForDrops(stack, state);
-        } else {
-            return true; // ブロックを破壊できる
-        }
-    }
-
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         Level world = attacker.level();

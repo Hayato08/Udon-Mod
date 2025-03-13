@@ -39,19 +39,24 @@ public class UdonItems {
     public static final DeferredItem<Item> DRY_IWASHI =
             ITEMS.register("dry_iwashi", () -> new Item(new Item.Properties()));
     // いわし
-    public static final DeferredItem<Item> IWASHI=
-            ITEMS.register("iwashi", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> IWASHI = ITEMS.register("iwashi",
+            () -> new Item(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(2).saturationModifier(0.1f).build()
+            )));
     // 鰹節
     public static final DeferredItem<Item> DRY_KATSUO =
             ITEMS.register("dry_katsuo", () -> new Item(new Item.Properties()));
+    // いわしフレークス
     public static final DeferredItem<Item> IWASHI_FLAKES =
             ITEMS.register("iwashi_flakes", () -> new Item(new Item.Properties()));
     // 削り鰹節
     public static final DeferredItem<Item> KATSUO_FLAKES =
             ITEMS.register("katsuo_flakes", () -> new Item(new Item.Properties()));
     // かつお
-    public static final DeferredItem<Item> KATSUO =
-            ITEMS.register("katsuo", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> KATSUO = ITEMS.register("katsuo",
+            () -> new Item(new Item.Properties().food(
+                    new FoodProperties.Builder().nutrition(2).saturationModifier(0.1f).build()
+            )));
     // うどんロープ
     public static final DeferredItem<Item> UDON_ROPE =
             ITEMS.register("udon_rope", () -> new Item(new Item.Properties()));

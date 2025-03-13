@@ -1,4 +1,3 @@
-
 package net.hayato08.udonmod.client.renderer;
 
 
