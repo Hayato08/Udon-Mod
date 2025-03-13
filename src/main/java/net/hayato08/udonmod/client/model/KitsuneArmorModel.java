@@ -14,8 +14,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 
 public class KitsuneArmorModel<T extends Entity> extends EntityModel<T> {
-	// This layer location should be baked with EntityRendererProvider.Context in
-	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("udonmod", "model_kitsune_armor_model"), "main");
 	public final ModelPart Head;
 	public final ModelPart Fox;

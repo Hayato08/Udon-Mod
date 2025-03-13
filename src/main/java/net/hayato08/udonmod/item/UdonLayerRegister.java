@@ -1,7 +1,3 @@
-
-/*
- *    MCreator note: This file will be REGENERATED on each build.
- */
 package net.hayato08.udonmod.item;
 
 import net.hayato08.udonmod.client.model.IwashiMobModel;
@@ -13,7 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
-public class UdonMobRegister {
+public class UdonLayerRegister {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event)
 	{
