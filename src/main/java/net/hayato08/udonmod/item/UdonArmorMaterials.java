@@ -18,14 +18,41 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class UdonArmorMaterials {
-    public static final Holder<ArmorMaterial> UDON_ARMOR_MATERIAL = register("kitsune",
+    public static final Holder<ArmorMaterial> CURRY_ARMOR_MATERIAL = register("curry",
             Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
                 attribute.put(ArmorItem.Type.BOOTS, 5);
                 attribute.put(ArmorItem.Type.LEGGINGS, 7);
                 attribute.put(ArmorItem.Type.CHESTPLATE, 9);
                 attribute.put(ArmorItem.Type.HELMET, 5);
                 attribute.put(ArmorItem.Type.BODY, 11);
-            }), 16, 2f, 0.1f, () -> UdonItems.OAGE.get());
+            }), 16, 2f, 0.1f, () -> UdonItems.CURRY_UDON.get());
+
+    public static final Holder<ArmorMaterial> COLD_ARMOR_MATERIAL = register("cold",
+            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
+                attribute.put(ArmorItem.Type.BOOTS, 5);
+                attribute.put(ArmorItem.Type.LEGGINGS, 7);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 9);
+                attribute.put(ArmorItem.Type.HELMET, 5);
+                attribute.put(ArmorItem.Type.BODY, 11);
+            }), 16, 2f, 0.1f, () -> UdonItems.CURRY_UDON.get());
+
+    public static final Holder<ArmorMaterial> BUKKAKE_ARMOR_MATERIAL = register("bukkake",
+            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
+                attribute.put(ArmorItem.Type.BOOTS, 5);
+                attribute.put(ArmorItem.Type.LEGGINGS, 7);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 9);
+                attribute.put(ArmorItem.Type.HELMET, 5);
+                attribute.put(ArmorItem.Type.BODY, 11);
+            }), 16, 2f, 0.1f, () -> UdonItems.CURRY_UDON.get());
+
+    public static final Holder<ArmorMaterial> ZARU_ARMOR_MATERIAL = register("zaru",
+            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
+                attribute.put(ArmorItem.Type.BOOTS, 5);
+                attribute.put(ArmorItem.Type.LEGGINGS, 7);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 9);
+                attribute.put(ArmorItem.Type.HELMET, 5);
+                attribute.put(ArmorItem.Type.BODY, 11);
+            }), 16, 2f, 0.1f, () -> UdonItems.CURRY_UDON.get());
 
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,

@@ -1,10 +1,13 @@
-package net.hayato08.udonmod.item.custom;
+package net.hayato08.udonmod.item;
 
 import com.google.common.collect.ImmutableMap;
+import net.hayato08.udonmod.item.custom.KitsuneArmorItem;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
@@ -14,7 +17,9 @@ import net.minecraft.world.level.Level;
 import java.util.List;
 import java.util.Map;
 
-public class ModArmorItem extends ArmorItem {
+public class UdonArmorItem extends ArmorItem {
+
+    private static final double FIRE_RADIUS = 8.0;
 
     // フルアーマー装備時に特殊効果を付けるメソッド
     // List.of(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1, false, false), new MobeffectInstance(...)))で実装
@@ -25,14 +30,20 @@ public class ModArmorItem extends ArmorItem {
                             List.of(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0, false, false)))
                     .build();
 
-    public ModArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties) {
+    public UdonArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties) {
         super(material, type, properties);
     }
 
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
-        if(entity instanceof Player player && !level.isClientSide() && hasFullSuitOfArmorOn(player)) {
-            evaluateArmorEffects(player);
+        super.inventoryTick(stack, level, entity, slotId, isSelected);
+        if(entity instanceof Player player && !level.isClientSide()
+                && hasFullSuitOfArmorOn(player)
+                && hasPlayerCorrectArmorOn(UdonArmorMaterials.CURRY_ARMOR_MATERIAL, player)) {
+            level.getEntitiesOfClass(LivingEntity.class, entity.getBoundingBox().inflate(FIRE_RADIUS))
+                    .stream()
+                    .filter(e -> e instanceof Monster)
+                    .forEach(e -> e.setRemainingFireTicks(20 * 15));
         }
     }
 

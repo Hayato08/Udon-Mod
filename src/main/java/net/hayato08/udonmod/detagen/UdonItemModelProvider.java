@@ -74,10 +74,15 @@ public class UdonItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(UdonItems.KITSUNE_LEGGINGS);
         trimmedArmorItem(UdonItems.KITSUNE_BOOTS);
 
+        trimmedArmorItem(UdonItems.CURRY_HELMET);
+        trimmedArmorItem(UdonItems.CURRY_CHESTPLATE);
+        trimmedArmorItem(UdonItems.CURRY_LEGGINGS);
+        trimmedArmorItem(UdonItems.CURRY_BOOTS);
+
     }
     // Shoutout to El_Redstoniano for making this
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {
-        final String MOD_ID = UdonMod.MOD_ID; // Change this to your mod id
+        final String MOD_ID = UdonMod.MOD_ID;
 
         if(itemDeferredItem.get() instanceof ArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {
