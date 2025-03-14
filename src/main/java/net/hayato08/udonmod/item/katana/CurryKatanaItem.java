@@ -1,4 +1,4 @@
-package net.hayato08.udonmod.item.custom;
+package net.hayato08.udonmod.item.katana;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;

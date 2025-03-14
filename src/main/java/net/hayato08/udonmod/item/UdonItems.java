@@ -2,7 +2,11 @@ package net.hayato08.udonmod.item;
 
 import net.hayato08.udonmod.UdonMod;
 import net.hayato08.udonmod.entity.UdonEntities;
+import net.hayato08.udonmod.item.armor.KitsuneArmorItem;
+import net.hayato08.udonmod.item.armor.UdonArmorItem;
+import net.hayato08.udonmod.item.armor.UdonArmorMaterials;
 import net.hayato08.udonmod.item.custom.*;
+import net.hayato08.udonmod.item.katana.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -111,21 +115,15 @@ public class UdonItems {
     public static final DeferredItem<ArmorItem> KITSUNE_HELMET =
             ITEMS.register("kitsune_helmet",() -> new UdonArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
-
     public static final DeferredItem<ArmorItem> KITSUNE_CHESTPLATE =
             ITEMS.register("kitsune_chestplate",() -> new UdonArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE ,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE .getDurability(19))));
-
     public static final DeferredItem<ArmorItem> KITSUNE_LEGGINGS =
             ITEMS.register("kitsune_leggings",() -> new UdonArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
-
     public static final DeferredItem<ArmorItem> KITSUNE_BOOTS =
             ITEMS.register("kitsune_boots",() -> new UdonArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
-
-
-
 
     // CURRY_ARMOR
     public static final DeferredItem<ArmorItem> CURRY_HELMET =
@@ -140,6 +138,7 @@ public class UdonItems {
     public static final DeferredItem<ArmorItem> CURRY_BOOTS =
             ITEMS.register("curry_boots",() -> new UdonArmorItem(UdonArmorMaterials.CURRY_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
     // ZARU_ARMOR
     public static final DeferredItem<ArmorItem> ZARU_HELMET =
             ITEMS.register("zaru_helmet",() -> new UdonArmorItem(UdonArmorMaterials.ZARU_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
@@ -212,6 +211,7 @@ public class UdonItems {
             ITEMS.register("rich_curry_udon", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                     .nutrition(20) // 満腹度の設定
                     .saturationModifier(0.7f) // 隠し満腹度（満腹時以降の満腹度）
+                    .alwaysEdible() // 満腹でも食べられる
                     .effect(new MobEffectInstance(MobEffects.REGENERATION, 300, 0), 1.0F) //
                     .build())));
 

@@ -1,4 +1,4 @@
-package net.hayato08.udonmod.item.custom;
+package net.hayato08.udonmod.item.katana;
 
 import net.hayato08.udonmod.entity.UdonEntities;
 import net.hayato08.udonmod.entity.custom.WolFoxEntity;
@@ -22,7 +22,7 @@ import java.util.List;
 public class KitsuneKatanaItem extends SwordItem {
 
     private static int foxCounter = 0;
-    private static final int DESPAWN_TIME = 20 * 30; // 30 seconds
+    private static final int DESPAWN_TIME = 20 * 15; // 15 seconds
     private static final int MAX_FOXES = 5;
     private static final List<WolFoxEntity> spawnedFoxes = new ArrayList<>();
 

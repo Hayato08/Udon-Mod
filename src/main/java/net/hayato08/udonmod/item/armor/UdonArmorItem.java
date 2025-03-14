@@ -1,7 +1,6 @@
-package net.hayato08.udonmod.item;
+package net.hayato08.udonmod.item.armor;
 
 import com.google.common.collect.ImmutableMap;
-import net.hayato08.udonmod.item.custom.KitsuneArmorItem;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -28,6 +27,8 @@ public class UdonArmorItem extends ArmorItem {
             (new ImmutableMap.Builder<Holder<ArmorMaterial>, List<MobEffectInstance>>())
                     .put(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL,
                             List.of(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0, false, false)))
+                    .put(UdonArmorMaterials.COLD_ARMOR_MATERIAL,
+                            List.of(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0, false, false)))
                     .build();
 
     public UdonArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties) {

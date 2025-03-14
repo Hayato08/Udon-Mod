@@ -1,4 +1,4 @@
-package net.hayato08.udonmod.item.custom;
+package net.hayato08.udonmod.item.armor;
 
 import net.hayato08.udonmod.client.model.KitsuneArmorModel;
 import net.hayato08.udonmod.item.UdonItems;
@@ -45,7 +45,7 @@ public abstract class KitsuneArmorItem extends ArmorItem {
 				map.put(Type.HELMET, 3);
 				map.put(Type.BODY, 11);
 			}), 9, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.FOX_AMBIENT),
-					() -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("udonmod:udon_kitsune_armor"))),
+					() -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("udonmod:kitsune"))),
 					0f, 0f);
 			registerHelper.register(ResourceLocation.parse("udonmod:kitsune"), armorMaterial);
 			KITSUNE_ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);

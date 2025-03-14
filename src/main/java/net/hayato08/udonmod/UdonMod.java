@@ -7,7 +7,8 @@ import net.hayato08.udonmod.events.WolFoxEventHandler;
 import net.hayato08.udonmod.init.UdonModMenus;
 import net.hayato08.udonmod.item.UdonCreativeModeTabs;
 import net.hayato08.udonmod.item.UdonItems;
-import net.hayato08.udonmod.item.custom.KitsuneKatanaItem;
+import net.hayato08.udonmod.item.armor.BukkakeArmorAttackNegation;
+import net.hayato08.udonmod.item.katana.KitsuneKatanaItem;
 import net.hayato08.udonmod.particle.GraySplashParticle;
 import net.hayato08.udonmod.particle.UdonParticles;
 import net.hayato08.udonmod.sound.UdonSounds;
@@ -62,6 +63,7 @@ public class UdonMod
 
         NeoForge.EVENT_BUS.register(this);
         NeoForge.EVENT_BUS.register(WolFoxEventHandler.class);
+        NeoForge.EVENT_BUS.register(BukkakeArmorAttackNegation.class);
 
         // レジストリの登録
         UdonCreativeModeTabs.register(modEventBus);
