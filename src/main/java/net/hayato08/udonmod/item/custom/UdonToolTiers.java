@@ -7,7 +7,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.SimpleTier;
 
 public class UdonToolTiers {
-    // Increase enchantability for KITSUNE (from 1 to a higher value like 15)
     public static final Tier KITSUNE = new SimpleTier(UdonTags.Blocks.INCCORECT_FOR_UDON_TOOL,
             2000, 4f, 3f, 28, () -> Ingredient.of(UdonItems.OAGE));
 

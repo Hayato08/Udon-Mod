@@ -1,4 +1,4 @@
-package net.hayato08.udonmod.item.custom;
+package net.hayato08.udonmod.item.katana;
 
 import net.hayato08.udonmod.particle.UdonParticles;
 import net.minecraft.server.level.ServerLevel;
