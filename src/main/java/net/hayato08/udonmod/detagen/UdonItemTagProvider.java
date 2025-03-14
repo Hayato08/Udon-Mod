@@ -62,12 +62,16 @@ public class UdonItemTagProvider extends ItemTagsProvider {
                 .add(UdonItems.BUKKAKE_KATANA.get());
 
         tag(ItemTags.HEAD_ARMOR)
-                .add(UdonItems.KITSUNE_HELMET.get());
+                .add(UdonItems.KITSUNE_HELMET.get())
+                .add(UdonItems.CURRY_HELMET.get());
         tag(ItemTags.CHEST_ARMOR)
-                .add(UdonItems.KITSUNE_CHESTPLATE.get());
+                .add(UdonItems.KITSUNE_CHESTPLATE.get())
+                .add(UdonItems.CURRY_CHESTPLATE.get());
         tag(ItemTags.LEG_ARMOR)
-                .add(UdonItems.KITSUNE_LEGGINGS.get());
+                .add(UdonItems.KITSUNE_LEGGINGS.get())
+                .add(UdonItems.CURRY_LEGGINGS.get());
         tag(ItemTags.FOOT_ARMOR)
-                .add(UdonItems.KITSUNE_BOOTS.get());
+                .add(UdonItems.KITSUNE_BOOTS.get())
+                .add(UdonItems.CURRY_BOOTS.get());
     }
 }

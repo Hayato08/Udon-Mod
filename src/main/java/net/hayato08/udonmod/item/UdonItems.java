@@ -104,78 +104,78 @@ public class UdonItems {
 
     // armor items (防具)
     public static final DeferredItem<ArmorItem> KITSUNE_HELMET =
-            ITEMS.register("kitsune_helmet",() -> new ModArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            ITEMS.register("kitsune_helmet",() -> new UdonArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> KITSUNE_CHESTPLATE =
-            ITEMS.register("kitsune_chestplate",() -> new ModArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE ,
+            ITEMS.register("kitsune_chestplate",() -> new UdonArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE ,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE .getDurability(19))));
 
     public static final DeferredItem<ArmorItem> KITSUNE_LEGGINGS =
-            ITEMS.register("kitsune_leggings",() -> new ModArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+            ITEMS.register("kitsune_leggings",() -> new UdonArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> KITSUNE_BOOTS =
-            ITEMS.register("kitsune_boots",() -> new ModArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+            ITEMS.register("kitsune_boots",() -> new UdonArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
-/*
+
+
+
+
+    // CURRY_ARMOR
+    public static final DeferredItem<ArmorItem> CURRY_HELMET =
+            ITEMS.register("curry_helmet",() -> new UdonArmorItem(UdonArmorMaterials.CURRY_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+    public static final DeferredItem<ArmorItem> CURRY_CHESTPLATE =
+            ITEMS.register("curry_chestplate",() -> new UdonArmorItem(UdonArmorMaterials.CURRY_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+    public static final DeferredItem<ArmorItem> CURRY_LEGGINGS =
+            ITEMS.register("curry_leggings",() -> new UdonArmorItem(UdonArmorMaterials.CURRY_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+    public static final DeferredItem<ArmorItem> CURRY_BOOTS =
+            ITEMS.register("curry_boots",() -> new UdonArmorItem(UdonArmorMaterials.CURRY_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
     // ZARU_ARMOR
     public static final DeferredItem<ArmorItem> ZARU_HELMET =
-            ITEMS.register("zaru_helmet",() -> new ModArmorItem(ZaruArmorItem.ZARU_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            ITEMS.register("zaru_helmet",() -> new UdonArmorItem(UdonArmorMaterials.ZARU_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
     public static final DeferredItem<ArmorItem> ZARU_CHESTPLATE =
-            ITEMS.register("zaru_chestplate",() -> new ModArmorItem(ZaruArmorItem.ZARU_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+            ITEMS.register("zaru_chestplate",() -> new UdonArmorItem(UdonArmorMaterials.ZARU_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
     public static final DeferredItem<ArmorItem> ZARU_LEGGINGS =
-            ITEMS.register("zaru_leggings",() -> new ModArmorItem(ZaruArmorItemItem.ZARU_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+            ITEMS.register("zaru_leggings",() -> new UdonArmorItem(UdonArmorMaterials.ZARU_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
     public static final DeferredItem<ArmorItem> ZARU_BOOTS =
-            ITEMS.register("zaru_boots",() -> new ModArmorItem(ZaruArmorItemItem.ZARU_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+            ITEMS.register("zaru_boots",() -> new UdonArmorItem(UdonArmorMaterials.ZARU_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
 
     // BUKKAKE_ARMOR
     public static final DeferredItem<ArmorItem> BUKKAKE_HELMET =
-            ITEMS.register("bukkake_helmet",() -> new ModArmorItem(BukkakeItem.BUKKAKE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            ITEMS.register("bukkake_helmet",() -> new UdonArmorItem(UdonArmorMaterials.BUKKAKE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
     public static final DeferredItem<ArmorItem> BUKKAKE_CHESTPLATE =
-            ITEMS.register("bukkake_chestplate",() -> new ModArmorItem(BukkakeItem.BUKKAKE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+            ITEMS.register("bukkake_chestplate",() -> new UdonArmorItem(UdonArmorMaterials.BUKKAKE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
     public static final DeferredItem<ArmorItem> BUKKAKE_LEGGINGS =
-            ITEMS.register("bukkake_leggings",() -> new ModArmorItem(BukkakeItem.BUKKAKE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+            ITEMS.register("bukkake_leggings",() -> new UdonArmorItem(UdonArmorMaterials.BUKKAKE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
     public static final DeferredItem<ArmorItem> BUKKAKE_BOOTS =
-            ITEMS.register("bukkake_boots",() -> new ModArmorItem(BukkakeItem.BUKKAKE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
-                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
-
-    // CURRY_ARMOR
-    public static final DeferredItem<ArmorItem> CURRY_HELMET =
-            ITEMS.register("curry_helmet",() -> new ModArmorItem(CurryItem.CURRY_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
-                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
-    public static final DeferredItem<ArmorItem> CURRY_CHESTPLATE =
-            ITEMS.register("curry_chestplate",() -> new ModArmorItem(CurryItem.CURRY_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
-                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
-    public static final DeferredItem<ArmorItem> CURRY_LEGGINGS =
-            ITEMS.register("curry_leggings",() -> new ModArmorItem(CurryItem.CURRY_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
-                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
-    public static final DeferredItem<ArmorItem> CURRY_BOOTS =
-            ITEMS.register("curry_boots",() -> new ModArmorItem(CurryItem.CURRY_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+            ITEMS.register("bukkake_boots",() -> new UdonArmorItem(UdonArmorMaterials.BUKKAKE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
 
     // COLD_ARMOR
     public static final DeferredItem<ArmorItem> COLD_HELMET =
-            ITEMS.register("cold_helmet",() -> new ModArmorItem(ColdItem.COLD_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            ITEMS.register("cold_helmet",() -> new UdonArmorItem(UdonArmorMaterials.COLD_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
     public static final DeferredItem<ArmorItem> COLD_CHESTPLATE =
-            ITEMS.register("cold_chestplate",() -> new ModArmorItem(ColdItem.COLD_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+            ITEMS.register("cold_chestplate",() -> new UdonArmorItem(UdonArmorMaterials.COLD_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
     public static final DeferredItem<ArmorItem> COLD_LEGGINGS =
-            ITEMS.register("cold_leggings",() -> new ModArmorItem(ColdItem.COLD_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+            ITEMS.register("cold_leggings",() -> new UdonArmorItem(UdonArmorMaterials.COLD_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
     public static final DeferredItem<ArmorItem> COLD_BOOTS =
-            ITEMS.register("cold_boots",() -> new ModArmorItem(ColdItem.COLD_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+            ITEMS.register("cold_boots",() -> new UdonArmorItem(UdonArmorMaterials.COLD_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
-
- */
 
     // 食料（食べ物）
     // ぶっかけうどん

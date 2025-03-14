@@ -48,6 +48,12 @@ public class UdonCreativeModeTabs {
                     output.accept(UdonItems.KITSUNE_CHESTPLATE);
                     output.accept(UdonItems.KITSUNE_LEGGINGS);
                     output.accept(UdonItems.KITSUNE_BOOTS);
+
+                    output.accept(UdonItems.CURRY_HELMET);
+                    output.accept(UdonItems.CURRY_CHESTPLATE);
+                    output.accept(UdonItems.CURRY_LEGGINGS);
+                    output.accept(UdonItems.CURRY_BOOTS);
+
                     output.accept(UdonItems.KITSUNE_KATANA);
                     output.accept(UdonItems.COLD_KATANA);
                     output.accept(UdonItems.CURRY_KATANA);

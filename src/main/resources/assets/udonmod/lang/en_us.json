@@ -23,10 +23,6 @@
   "item.udonmod.raw_udon": "Raw Udon",
   "item.udonmod.boiled_udon": "Boiled Udon",
   "item.udonmod.oage": "Oage",
-  "item.udonmod.kitsune_leggings": "Kitsune Leggings",
-  "item.udonmod.kitsune_boots": "Kitsune Boots",
-  "item.udonmod.kitsune_chestplate": "Kitsune Chestplate",
-  "item.udonmod.kitsune_helmet": "Kitsune Helmet",
 
   "item.udonmod.kitsune_katana": "Wolfox Sword",
   "item.udonmod.bukkake_katana": "Bukkake Sword",
@@ -34,12 +30,34 @@
   "item.udonmod.cold_katana": "Cold Sword",
   "item.udonmod.curry_katana": "Curry Sword",
 
+  "item.udonmod.kitsune_leggings": "Kitsune Leggings",
+  "item.udonmod.kitsune_boots": "Kitsune Boots",
+  "item.udonmod.kitsune_chestplate": "Kitsune Chestplate",
+  "item.udonmod.kitsune_helmet": "Kitsune Helmet",
+
+  "item.udonmod.curry_helmet": "Curry Helmet",
+  "item.udonmod.curry_chestplate": "Curry Chestplate",
+  "item.udonmod.curry_leggings": "Curry Leggings",
+  "item.udonmod.curry_boots": "Curry Boots",
+
+  "item.udonmod.cold_helmet": "Cold Helmet",
+  "item.udonmod.cold_chestplate": "Cold Chestplate",
+  "item.udonmod.cold_leggings": "Cold Leggings",
+  "item.udonmod.cold_boots": "Cold Boots",
+
+  "item.udonmod.zaru_helmet": "Zaru Helmet",
+  "item.udonmod.zaru_chestplate": "Zaru Chestplate",
+  "item.udonmod.zaru_leggings": "Zaru Leggings",
+  "item.udonmod.zaru_boots": "Zaru Boots",
+
+  "item.udonmod.bukkake_helmet": "Bukkake Helmet",
+  "item.udonmod.bukkake_chestplate": "Bukkake Chestplate",
+  "item.udonmod.bukkake_leggings": "Bukkake Leggings",
+  "item.udonmod.bukkake_boots": "Bukkake Boots",
+
   "entity.udonmod.wolfox": "Wolfox",
 
-
   "block.udonmod.stone_mill": "Stone Mill Block",
-
-
   "gui.udonmod.stone_mill_gui.button_mill": "Mill",
 
   "creativetab.udonmod.udon_items": "Udon Items",
