@@ -80,7 +80,7 @@ public class StoneMillItemChangerProcedure
 				itemCanger(entity, pSetstack, slot0, slot1, KATSUO_MAGNIFICATION);
 			}
 		}
-		// いわしを削りいわしにする
+		// にぼしを魚粉にする
 		else if ((entity instanceof Player pPlayerSlotItem && pPlayerSlotItem.containerMenu instanceof Supplier pSupplier &&
 				pSupplier.get() instanceof Map pSlot ? ((Slot) pSlot.get(0)).getItem() : ItemStack.EMPTY).getItem() == UdonItems.DRY_IWASHI.get())
 		{
@@ -123,7 +123,7 @@ public class StoneMillItemChangerProcedure
 	    第1引数は対象のエンティティ
 	    第2引数は変換後のアイテム
 	    第3、第4引数は各スロットのアイテムの個数
-	    第4引数は2つのスロットの個数の合計値が64を超える場合は真
+	    第4引数はアイテムの変換倍率を設定
 	    Usage:
 			<ItemStack pSetstack = new ItemStack(UdonItems.FLOUR.get()).copy();>
 			 itemCanger(entity, pSetstack, slot0, slot1, true);

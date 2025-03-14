@@ -1,4 +1,3 @@
-
 package net.hayato08.udonmod.client.renderer;
 
 import net.hayato08.udonmod.client.model.IwashiMobModel;
