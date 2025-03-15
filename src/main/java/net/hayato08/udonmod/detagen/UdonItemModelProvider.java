@@ -61,11 +61,6 @@ public class UdonItemModelProvider extends ItemModelProvider {
         basicItem(UdonItems.RICH_ZARU_UDON.get());
         basicItem(UdonItems.BOILED_UDON.get());
         basicItem(UdonItems.OAGE.get());
-        basicItem(UdonItems.KITSUNE_KATANA.get());
-        basicItem(UdonItems.COLD_KATANA.get());
-        basicItem(UdonItems.BUKKAKE_KATANA.get());
-        basicItem(UdonItems.ZARU_KATANA.get());
-        basicItem(UdonItems.CURRY_KATANA.get());
         basicItem(UdonItems.IWASHI_FLAKES.get());
 
 
@@ -78,6 +73,21 @@ public class UdonItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(UdonItems.CURRY_CHESTPLATE);
         trimmedArmorItem(UdonItems.CURRY_LEGGINGS);
         trimmedArmorItem(UdonItems.CURRY_BOOTS);
+
+        trimmedArmorItem(UdonItems.ZARU_HELMET);
+        trimmedArmorItem(UdonItems.ZARU_CHESTPLATE);
+        trimmedArmorItem(UdonItems.ZARU_LEGGINGS);
+        trimmedArmorItem(UdonItems.ZARU_BOOTS);
+
+        trimmedArmorItem(UdonItems.BUKKAKE_HELMET);
+        trimmedArmorItem(UdonItems.BUKKAKE_CHESTPLATE);
+        trimmedArmorItem(UdonItems.BUKKAKE_LEGGINGS);
+        trimmedArmorItem(UdonItems.BUKKAKE_BOOTS);
+
+        trimmedArmorItem(UdonItems.COLD_HELMET);
+        trimmedArmorItem(UdonItems.COLD_CHESTPLATE);
+        trimmedArmorItem(UdonItems.COLD_LEGGINGS);
+        trimmedArmorItem(UdonItems.COLD_BOOTS);
 
     }
     // Shoutout to El_Redstoniano for making this
