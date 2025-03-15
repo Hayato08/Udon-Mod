@@ -46,21 +46,11 @@ public class UdonArmorMaterials {
                 attribute.put(ArmorItem.Type.BODY, 5);
             }), 9, 0f, 0.0f, () -> UdonItems.BUKKAKE_UDON.get());
 
-    public static final Holder<ArmorMaterial> ZARU_ARMOR_MATERIAL = register("zaru",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 2);
-                attribute.put(ArmorItem.Type.LEGGINGS, 5);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 6);
-                attribute.put(ArmorItem.Type.HELMET, 2);
-                attribute.put(ArmorItem.Type.BODY, 5);
-            }), 9, 0f, 0.0f, () -> UdonItems.ZARU_UDON.get());
-
-
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
                                                   int enchantability, float toughness, float knockbackResistance,
                                                   Supplier<Item> ingredientItem) {
         ResourceLocation location = ResourceLocation.fromNamespaceAndPath(UdonMod.MOD_ID, name);
-        Holder<SoundEvent> equipSound = SoundEvents.ARMOR_EQUIP_NETHERITE;
+        Holder<SoundEvent> equipSound = SoundEvents.ARMOR_EQUIP_IRON;
         Supplier<Ingredient> ingredient = () -> Ingredient.of(ingredientItem.get());
         List<ArmorMaterial.Layer> layers = List.of(new ArmorMaterial.Layer(location));
 

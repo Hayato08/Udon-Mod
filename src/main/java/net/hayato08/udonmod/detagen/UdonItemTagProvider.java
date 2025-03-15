@@ -63,15 +63,27 @@ public class UdonItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.HEAD_ARMOR)
                 .add(UdonItems.KITSUNE_HELMET.get())
-                .add(UdonItems.CURRY_HELMET.get());
+                .add(UdonItems.CURRY_HELMET.get())
+                .add(UdonItems.ZARU_HELMET.get())
+                .add(UdonItems.BUKKAKE_HELMET.get())
+                .add(UdonItems.COLD_HELMET.get());
         tag(ItemTags.CHEST_ARMOR)
                 .add(UdonItems.KITSUNE_CHESTPLATE.get())
-                .add(UdonItems.CURRY_CHESTPLATE.get());
+                .add(UdonItems.CURRY_CHESTPLATE.get())
+                .add(UdonItems.ZARU_CHESTPLATE.get())
+                .add(UdonItems.BUKKAKE_CHESTPLATE.get())
+                .add(UdonItems.COLD_CHESTPLATE.get());
         tag(ItemTags.LEG_ARMOR)
                 .add(UdonItems.KITSUNE_LEGGINGS.get())
-                .add(UdonItems.CURRY_LEGGINGS.get());
+                .add(UdonItems.CURRY_LEGGINGS.get())
+                .add(UdonItems.ZARU_LEGGINGS.get())
+                .add(UdonItems.BUKKAKE_LEGGINGS.get())
+                .add(UdonItems.COLD_LEGGINGS.get());
         tag(ItemTags.FOOT_ARMOR)
                 .add(UdonItems.KITSUNE_BOOTS.get())
-                .add(UdonItems.CURRY_BOOTS.get());
+                .add(UdonItems.CURRY_BOOTS.get())
+                .add(UdonItems.ZARU_BOOTS.get())
+                .add(UdonItems.BUKKAKE_BOOTS.get())
+                .add(UdonItems.COLD_BOOTS.get());
     }
 }

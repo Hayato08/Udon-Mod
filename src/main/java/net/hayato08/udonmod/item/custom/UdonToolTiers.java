@@ -17,7 +17,6 @@ public class UdonToolTiers {
     public static final Tier CURRY = new SimpleTier(UdonTags.Blocks.INCCORECT_FOR_UDON_TOOL,
             2000, 4f, 0f, 28, () -> Ingredient.of(UdonItems.CURRY_UDON)); // Change to CURRY_UDON
 
-    // Fix the repair material for BUKKAKE
     public static final Tier BUKKAKE = new SimpleTier(UdonTags.Blocks.INCCORECT_FOR_UDON_TOOL,
             2000, 4f, 0f, 28, () -> Ingredient.of(UdonItems.BUKKAKE_UDON));
 
