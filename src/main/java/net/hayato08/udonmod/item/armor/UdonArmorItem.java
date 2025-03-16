@@ -26,7 +26,7 @@ public class UdonArmorItem extends ArmorItem {
     private static final Map<Holder<ArmorMaterial>, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<Holder<ArmorMaterial>, List<MobEffectInstance>>())
                     .put(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL,
-                            List.of(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0, false, false)))
+                            List.of(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1, false, false)))
                     .put(UdonArmorMaterials.COLD_ARMOR_MATERIAL,
                             List.of(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 1, false, false)))
                     .put(ZaruArmorItem.ZARU_ARMOR_MATERIAL,
@@ -40,13 +40,15 @@ public class UdonArmorItem extends ArmorItem {
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
         super.inventoryTick(stack, level, entity, slotId, isSelected);
-        if(entity instanceof Player player && !level.isClientSide()
-                && hasFullSuitOfArmorOn(player)
-                && hasPlayerCorrectArmorOn(UdonArmorMaterials.CURRY_ARMOR_MATERIAL, player)) {
-            level.getEntitiesOfClass(LivingEntity.class, entity.getBoundingBox().inflate(FIRE_RADIUS))
-                    .stream()
-                    .filter(e -> e instanceof Monster)
-                    .forEach(e -> e.setRemainingFireTicks(20 * 15));
+        if(entity instanceof Player player && !level.isClientSide() && hasFullSuitOfArmorOn(player))
+        {
+            evaluateArmorEffects(player);
+            if(hasPlayerCorrectArmorOn(UdonArmorMaterials.CURRY_ARMOR_MATERIAL, player)) {
+                level.getEntitiesOfClass(LivingEntity.class, entity.getBoundingBox().inflate(FIRE_RADIUS))
+                        .stream()
+                        .filter(e -> e instanceof Monster)
+                        .forEach(e -> e.setRemainingFireTicks(20 * 15));
+            }
         }
     }
 
