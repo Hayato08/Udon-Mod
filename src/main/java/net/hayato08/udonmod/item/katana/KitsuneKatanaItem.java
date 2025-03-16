@@ -2,11 +2,9 @@ package net.hayato08.udonmod.item.katana;
 
 import net.hayato08.udonmod.entity.UdonEntities;
 import net.hayato08.udonmod.entity.custom.WolFoxEntity;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Fox;
 import net.minecraft.world.level.Level;
@@ -87,5 +85,11 @@ public class KitsuneKatanaItem extends SwordItem {
                 iterator.remove();
             }
         }
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("tooltip.udonmod.kitsune_katana"));
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 }

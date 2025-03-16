@@ -64,6 +64,18 @@
 
   "creativetab.udonmod.udon_items": "うどんアイテム",
   "creativetab.udonmod.udon_tools": "うどんツール",
-  "creativetab.udonmod.udon_foods": "各種うどん"
+  "creativetab.udonmod.udon_foods": "各種うどん",
+
+  "tooltip.udonmod.zaru_katana": "エンチャント不可",
+  "tooltip.udonmod.bukkake_katana": "攻撃したモブにうどん汁をぶっかける",
+  "tooltip.udonmod.cold_katana": "ネザー地帯での攻撃力が上昇する",
+  "tooltip.udonmod.curry_katana": "あまりの辛さで攻撃したモブが燃える",
+  "tooltip.udonmod.kitsune_katana": "最大５体の狐狼を15秒間召喚する",
+
+  "tooltip.udonmod.kitsune_armor": "フルアーマー装備時、移動速度上昇を付与",
+  "tooltip.udonmod.curry_armor": "フルアーマー装備時、周囲のモンスターを15秒間燃やす",
+  "tooltip.udonmod.cold_armor": "フルアーマー装備時、耐火を付与する",
+  "tooltip.udonmod.zaru_armor": "フルアーマー装備時、採掘速度上昇を付与 エンチャント不可",
+  "tooltip.udonmod.bukkake_armor": "フルアーマー装備時、敵の攻撃を25%の確率でかわす"
 
 }

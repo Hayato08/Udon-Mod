@@ -28,9 +28,9 @@ public class UdonArmorItem extends ArmorItem {
                     .put(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL,
                             List.of(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0, false, false)))
                     .put(UdonArmorMaterials.COLD_ARMOR_MATERIAL,
-                            List.of(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0, false, false)))
+                            List.of(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 1, false, false)))
                     .put(ZaruArmorItem.ZARU_ARMOR_MATERIAL,
-                            List.of())
+                            List.of(new MobEffectInstance(MobEffects.DIG_SPEED, 200, 1, false, false)))
                     .build();
 
     public UdonArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties) {

@@ -1,13 +1,13 @@
 package net.hayato08.udonmod.item.katana;
 
 import net.hayato08.udonmod.item.UdonItems;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
+
+import java.util.List;
 
 public class ColdKatanaItem extends SwordItem {
     public ColdKatanaItem(Tier tier, Item.Properties properties) {
@@ -33,5 +33,11 @@ public class ColdKatanaItem extends SwordItem {
             target.hurt(level.damageSources().playerAttack((Player) attacker), extraDamage);
         }
         return super.hurtEnemy(stack, target, attacker);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("tooltip.udonmod.cold_katana"));
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 }

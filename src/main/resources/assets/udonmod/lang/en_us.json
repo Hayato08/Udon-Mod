@@ -62,9 +62,17 @@
 
   "creativetab.udonmod.udon_items": "Udon Items",
   "creativetab.udonmod.udon_tools": "Udon Tools",
-  "creativetab.udonmod.udon_foods": "Udon Foods"
+  "creativetab.udonmod.udon_foods": "Udon Foods",
 
+  "tooltip.udonmod.zaru_katana": "Cannot be enchanted",
+  "tooltip.udonmod.kitsune_katana": "summons up to 5 fox wolves for 15 seconds",
+  "tooltip.udonmod.bukkake_katana":"Sprinkle udon soup on the mob that attacked you",
+  "tooltip.udonmod.curry_katana":"The mobs attacked burn up due to too much spiciness.",
+  "tooltip.udonmod.cold_katana":"Increases attack power in the nether zone",
 
-
-
+  "tooltip.udonmod.kitsune_armor": "Increases movement speed when equipped with full armor",
+  "tooltip.udonmod.curry_armor": "When equipped with full armor, burns surrounding monsters for 15 seconds",
+  "tooltip.udonmod.cold_armor": "Grants fire resistance when equipped with full armor",
+  "tooltip.udonmod.zaru_armor": "Grants increased mining speed when equipped with full armor. Not available for enchantment",
+  "tooltip.udonmod.bukkake_armor": "Dodge enemy attacks at 25% chance when equipped with full armor"
 }
