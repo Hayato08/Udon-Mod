@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"6": "udonmod:dev/stone_mill",
+		"6": "udonmod:block/stone_mill",
 		"particle": "udonmod:dev/cobblestone"
 	},
 	"elements": [
