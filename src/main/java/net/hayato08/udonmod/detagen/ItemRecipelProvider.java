@@ -22,13 +22,13 @@ public class ItemRecipelProvider extends RecipeProvider {
     protected void buildRecipes(RecipeOutput recipeOutput)
     {
         List<ItemLike> RAW_UDON_SMELTING = List.of(UdonItems.RAW_UDON);
-        List<ItemLike> BOILED_UDON_BLASTING = List.of(UdonItems.BOILED_UDON);
+        List<ItemLike> BOILED_UDON_SMELTING = List.of(UdonItems.BOILED_UDON);
 
         oreSmelting(recipeOutput, RAW_UDON_SMELTING, RecipeCategory.MISC, UdonItems.BOILED_UDON,0.25f, 200, "boiled_udon");
         oreBlasting(recipeOutput, RAW_UDON_SMELTING, RecipeCategory.MISC, UdonItems.BOILED_UDON,0.25f, 100, "boiled_udon");
 
-        oreSmelting(recipeOutput, BOILED_UDON_BLASTING, RecipeCategory.MISC, UdonItems.DRY_UDON,0.25f, 200, "dry_udon");
-        oreBlasting(recipeOutput, BOILED_UDON_BLASTING, RecipeCategory.MISC, UdonItems.DRY_UDON,0.25f, 100, "dry_udon");
+        oreSmelting(recipeOutput, BOILED_UDON_SMELTING, RecipeCategory.MISC, UdonItems.DRY_UDON,0.25f, 200, "dry_udon");
+        oreBlasting(recipeOutput, BOILED_UDON_SMELTING, RecipeCategory.MISC, UdonItems.DRY_UDON,0.25f, 100, "dry_udon");
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UdonBlocks.STONE_MILL.get())
