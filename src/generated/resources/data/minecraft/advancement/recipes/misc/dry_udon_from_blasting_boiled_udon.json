@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_boiled_udon": {
+      "conditions": {
+        "items": [
+          {
+            "items": "udonmod:boiled_udon"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:dry_udon_from_blasting_boiled_udon"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_boiled_udon"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:dry_udon_from_blasting_boiled_udon"
+    ]
+  }
+}

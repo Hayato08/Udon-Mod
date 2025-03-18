@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "boiled_udon",
+  "ingredient": {
+    "item": "udonmod:raw_udon"
+  },
+  "result": {
+    "count": 1,
+    "id": "udonmod:boiled_udon"
+  }
+}
