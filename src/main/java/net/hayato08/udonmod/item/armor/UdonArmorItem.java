@@ -19,6 +19,7 @@ import java.util.Map;
 public class UdonArmorItem extends ArmorItem {
 
     private static final double FIRE_RADIUS = 8.0;
+    private static final int FIRE_SECONDS = 15;
 
     // フルアーマー装備時に特殊効果を付けるメソッド
     // List.of(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1, false, false), new MobeffectInstance(...)))で実装
@@ -47,7 +48,7 @@ public class UdonArmorItem extends ArmorItem {
                 level.getEntitiesOfClass(LivingEntity.class, entity.getBoundingBox().inflate(FIRE_RADIUS))
                         .stream()
                         .filter(e -> e instanceof Monster)
-                        .forEach(e -> e.setRemainingFireTicks(20 * 15));
+                        .forEach(e -> e.setRemainingFireTicks(20 * FIRE_SECONDS));
             }
         }
     }
