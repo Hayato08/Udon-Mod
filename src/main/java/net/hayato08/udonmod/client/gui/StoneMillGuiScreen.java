@@ -67,7 +67,6 @@ public class StoneMillGuiScreen extends AbstractContainerScreen<StoneMillGuiMenu
 	@Override
 	public void init() {
 		super.init();
-		// ボタンが押されたとき
 		button_mill = Button.builder(Component.translatable("gui.udonmod.stone_mill_gui.button_mill"), e ->
 		{
 			PacketDistributor.sendToServer(new StoneMillGuiButtonMessage(0, x, y, z));
