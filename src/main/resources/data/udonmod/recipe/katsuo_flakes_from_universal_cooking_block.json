@@ -1,0 +1,10 @@
+{
+  "type": "udonmod:universal_cooking_block",
+  "ingredient": {
+    "item": "udonmod:katsuo"
+  },
+  "result": {
+    "id": "udonmod:katsuo_flakes",
+    "count": 4
+  }
+}

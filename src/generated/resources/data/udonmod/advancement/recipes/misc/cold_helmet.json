@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cold_udon": {
+      "conditions": {
+        "items": [
+          {
+            "items": "udonmod:cold_udon"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "udonmod:cold_helmet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cold_udon"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "udonmod:cold_helmet"
+    ]
+  }
+}

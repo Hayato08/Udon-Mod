@@ -29,8 +29,10 @@ public class UdonItems {
     public static final int ATTACK_DAMAGE_OF_BUKKAKE_KATANA = 1;
     public static final int ATTACK_DAMAGE_OF_CURRY_KATANA = 5;
 
+    // 小麦粉
     public static final DeferredItem<Item> FLOUR =
             ITEMS.register("flour", () -> new Item(new Item.Properties()));
+    // おあげ
     public static final DeferredItem<Item> OAGE =
             ITEMS.register("oage", () -> new Item(new Item.Properties()));
     // だしの素

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "udonmod:block/universal_cooking_block"
+  }
+}

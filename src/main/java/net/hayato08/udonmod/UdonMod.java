@@ -1,6 +1,9 @@
 package net.hayato08.udonmod;
 
 import net.hayato08.udonmod.block.UdonBlocks;
+import net.hayato08.udonmod.block.entity.UdonBlockEntities;
+import net.hayato08.udonmod.client.gui.UdonMenuTypes;
+import net.hayato08.udonmod.client.gui.UniversalCookingBlockScreen;
 import net.hayato08.udonmod.entity.UdonEntities;
 import net.hayato08.udonmod.entity.UdonEntityAttributes;
 import net.hayato08.udonmod.events.WolFoxEventHandler;
@@ -11,8 +14,10 @@ import net.hayato08.udonmod.item.armor.BukkakeArmorAttackNegation;
 import net.hayato08.udonmod.item.katana.KitsuneKatanaItem;
 import net.hayato08.udonmod.particle.GraySplashParticle;
 import net.hayato08.udonmod.particle.UdonParticles;
+import net.hayato08.udonmod.recipe.UdonRecipes;
 import net.hayato08.udonmod.sound.UdonSounds;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import org.slf4j.Logger;
 
@@ -73,6 +78,9 @@ public class UdonMod
         UdonSounds.register(modEventBus);
         UdonEntities.register(modEventBus);
         UdonParticles.register(modEventBus);
+        UdonBlockEntities.register(modEventBus);
+        UdonMenuTypes.register(modEventBus);
+        UdonRecipes.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
@@ -168,6 +176,12 @@ public class UdonMod
             event.registerSpriteSet(UdonParticles.GRAY_SPLASH.get(),
                     GraySplashParticle.Provider::new);
         }
+
+
+        @SubscribeEvent
+        public static void registerScreens(RegisterMenuScreensEvent event) {
+            event.register(UdonMenuTypes.UNIVERSAL_COOKING_BLOCK_MENU.get(), UniversalCookingBlockScreen::new);
+        }
     }
 
     @SubscribeEvent
@@ -183,4 +197,5 @@ public class UdonMod
         actions.forEach(e -> e.getA().run());
         workQueue.removeAll(actions);
     }
+
 }

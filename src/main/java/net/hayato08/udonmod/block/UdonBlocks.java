@@ -1,12 +1,13 @@
 package net.hayato08.udonmod.block;
 
 import net.hayato08.udonmod.UdonMod;
+import net.hayato08.udonmod.block.custom.StoneMillBlock;
+import net.hayato08.udonmod.block.custom.UniversalCookingBlock;
 import net.hayato08.udonmod.item.UdonItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -25,6 +26,9 @@ public class UdonBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)
             ));
+
+    public static final DeferredBlock<Block> UNIVERSAL_COOKING_BLOCK =
+            registerBlock("universal_cooking_block", () -> new UniversalCookingBlock(BlockBehaviour.Properties.of()));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)

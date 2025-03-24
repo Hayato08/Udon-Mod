@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "boiled_udon",
+  "ingredient": {
+    "item": "udonmod:raw_udon"
+  },
+  "result": {
+    "count": 1,
+    "id": "udonmod:boiled_udon"
+  }
+}
