@@ -6,20 +6,11 @@
       "item": "udonmod:dashi"
     },
     {
-      "item": "udonmod:dashi"
-    },
-    {
-      "item": "udonmod:dashi"
-    },
-    {
-      "item": "udonmod:dashi"
-    },
-    {
-      "item": "udonmod:dry_iwashi"
+      "item": "udonmod:iwashi_flakes"
     }
   ],
   "result": {
-    "count": 4,
+    "count": 1,
     "id": "udonmod:rich_dashi"
   }
 }

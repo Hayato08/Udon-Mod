@@ -6,11 +6,17 @@
       "item": "udonmod:flour"
     },
     {
+      "item": "udonmod:flour"
+    },
+    {
+      "item": "udonmod:flour"
+    },
+    {
       "item": "minecraft:egg"
     }
   ],
   "result": {
-    "count": 1,
+    "count": 6,
     "id": "udonmod:raw_udon"
   }
 }

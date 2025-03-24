@@ -29,57 +29,55 @@ public class UdonItems {
     public static final int ATTACK_DAMAGE_OF_BUKKAKE_KATANA = 1;
     public static final int ATTACK_DAMAGE_OF_CURRY_KATANA = 5;
 
-    // 小麦粉
+    // 小麦粉 ok
     public static final DeferredItem<Item> FLOUR =
             ITEMS.register("flour", () -> new Item(new Item.Properties()));
     // おあげ
     public static final DeferredItem<Item> OAGE =
             ITEMS.register("oage", () -> new Item(new Item.Properties()));
-    // だしの素
+    // だしの素 ok
     public static final DeferredItem<Item> DASHI =
             ITEMS.register("dashi", () -> new Item(new Item.Properties()));
-    // 乾燥うどん
+    // 乾燥うどん ok
     public static final DeferredItem<Item> DRY_UDON =
             ITEMS.register("dry_udon", () -> new Item(new Item.Properties()));
-    // 冷凍うどん
+    // 冷凍うどん ok
     public static final DeferredItem<Item> ICE_UDON =
             ITEMS.register("ice_udon", () -> new Item(new Item.Properties()));
-    // アツアツの素うどん
+    // アツアツの素うどん ok
     public static final DeferredItem<Item> BOILED_UDON =
             ITEMS.register("boiled_udon", () -> new Item(new Item.Properties()));
-    // にぼし（乾燥したいわし）
+    // にぼし ok
     public static final DeferredItem<Item> DRY_IWASHI =
             ITEMS.register("dry_iwashi", () -> new Item(new Item.Properties()));
-    // いわし
+    // いわし ok
     public static final DeferredItem<Item> IWASHI = ITEMS.register("iwashi",
             () -> new Item(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(2).saturationModifier(0.1f).build()
             )));
-    // 鰹節
+    // 鰹節 ok
     public static final DeferredItem<Item> DRY_KATSUO =
             ITEMS.register("dry_katsuo", () -> new Item(new Item.Properties()));
-    // いわしフレークス
+    // いわしフレークス ok
     public static final DeferredItem<Item> IWASHI_FLAKES =
             ITEMS.register("iwashi_flakes", () -> new Item(new Item.Properties()));
-    // 削り鰹節
+    // 削り鰹節 ok
     public static final DeferredItem<Item> KATSUO_FLAKES =
             ITEMS.register("katsuo_flakes", () -> new Item(new Item.Properties()));
-    // かつお
+    // かつお ok
     public static final DeferredItem<Item> KATSUO = ITEMS.register("katsuo",
             () -> new Item(new Item.Properties().food(
                     new FoodProperties.Builder().nutrition(2).saturationModifier(0.1f).build()
             )));
-    // うどんロープ
-    public static final DeferredItem<Item> UDON_ROPE =
-            ITEMS.register("udon_rope", () -> new Item(new Item.Properties()));
-    // 高級だし
+
+    // 高級だし ok
     public static final DeferredItem<Item> RICH_DASHI =
             ITEMS.register("rich_dashi", () -> new Item(new Item.Properties()));
-    // 生うどん
+    // 生うどん ok
     public static final DeferredItem<Item> RAW_UDON=
             ITEMS.register("raw_udon", () -> new Item(new Item.Properties()));
 
-    // 武器（剣）kitsune_katana
+    // 武器（剣）kitsune_katana ok
     public static final DeferredItem<SwordItem> KITSUNE_KATANA =
             ITEMS.register("kitsune_katana", () -> new KitsuneKatanaItem(
                     UdonToolTiers.KITSUNE,
@@ -87,7 +85,7 @@ public class UdonItems {
                         .attributes(SwordItem.createAttributes(UdonToolTiers.KITSUNE, ATTACK_DAMAGE_OF_KITSUNE_KATANA, -2.4F))
                     )
             );
-    // 武器（剣）cold_katana
+    // 武器（剣）cold_katana ok
     public static final DeferredItem<SwordItem> COLD_KATANA =
             ITEMS.register("cold_katana", () -> new ColdKatanaItem(
                     UdonToolTiers.COLD,
@@ -95,7 +93,7 @@ public class UdonItems {
                             .attributes(SwordItem.createAttributes(UdonToolTiers.COLD, ATTACK_DAMAGE_OF_COLD_KATANA, -2.4F)))
             );
 
-    // 武器（剣）cold_katana
+    // 武器（剣）cold_katana ok
     public static final DeferredItem<SwordItem> ZARU_KATANA =
             ITEMS.register("zaru_katana", () -> new ZaruKatanaItem(
                     UdonToolTiers.ZARU,
@@ -103,7 +101,7 @@ public class UdonItems {
                             .attributes(SwordItem.createAttributes(UdonToolTiers.ZARU ,ATTACK_DAMAGE_OF_ZARU_KATANA, -2.4F)))
             );
 
-    // 武器（剣）cold_katana
+    // 武器（剣）cold_katana ok
     public static final DeferredItem<SwordItem> BUKKAKE_KATANA =
             ITEMS.register("bukkake_katana", () -> new BukkakeKatanaItem(
                     UdonToolTiers.BUKKAKE,
@@ -111,7 +109,7 @@ public class UdonItems {
                             .attributes(SwordItem.createAttributes(UdonToolTiers.BUKKAKE, ATTACK_DAMAGE_OF_BUKKAKE_KATANA, -2.4F)))
             );
 
-    // 武器（剣）cold_katana
+    // 武器（剣）cold_katana ok
     public static final DeferredItem<SwordItem> CURRY_KATANA =
             ITEMS.register("curry_katana", () -> new CurryKatanaItem(
                     UdonToolTiers.CURRY,
@@ -119,7 +117,7 @@ public class UdonItems {
                             .attributes(SwordItem.createAttributes(UdonToolTiers.CURRY, ATTACK_DAMAGE_OF_CURRY_KATANA, -2.4F)))
             );
 
-    // armor items (防具)
+    // armor items (防具) ok
     public static final DeferredItem<ArmorItem> KITSUNE_HELMET =
             ITEMS.register("kitsune_helmet",() -> new UdonArmorItem(KitsuneArmorItem.KITSUNE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19)))
@@ -325,7 +323,7 @@ public class UdonItems {
             });
 
     // 食料（食べ物）
-    // ぶっかけうどん
+    // ぶっかけうどん ok
     public static final DeferredItem<Item> BUKKAKE_UDON =
             ITEMS.register("bukkake_udon", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                     .nutrition(1) // 満腹度の設定
@@ -333,7 +331,7 @@ public class UdonItems {
                     .alwaysEdible() // 満腹でも食べられる
                     .effect(new MobEffectInstance(MobEffects.HEAL, 1, 2), 1.0F)
                     .build())));
-    // 高級ぶっかけうどん
+    // 高級ぶっかけうどん ok
     public static final DeferredItem<Item> RICH_BUKKAKE_UDON =
             ITEMS.register("rich_bukkake_udon", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                     .nutrition(2) // 満腹度の設定
@@ -342,7 +340,7 @@ public class UdonItems {
                     .effect(new MobEffectInstance(MobEffects.HEAL, 1, 6), 1.0F)
                     .build())));
 
-    // カレーうどん
+    // カレーうどん ok
     public static final DeferredItem<Item> CURRY_UDON =
             ITEMS.register("curry_udon", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                     .nutrition(20) // 満腹度の設定
@@ -358,14 +356,14 @@ public class UdonItems {
                     .effect(new MobEffectInstance(MobEffects.REGENERATION, 300, 0), 1.0F) //
                     .build())));
 
-    // 冷うどん
+    // 冷うどん ok
     public static final DeferredItem<Item> COLD_UDON =
             ITEMS.register("cold_udon", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                     .nutrition(5) // 満腹度の設定
                     .saturationModifier(0.4f) // 隠し満腹度（満腹時以降の満腹度）
                     .build())));
 
-    // 高級冷うどん
+    // 高級冷うどん ok
     public static final DeferredItem<Item> RICH_COLD_UDON =
             ITEMS.register("rich_cold_udon", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                     .nutrition(7) // 満腹度の設定
@@ -373,7 +371,7 @@ public class UdonItems {
 
                     .build())));
 
-    // きつねうどん
+    // きつねうどん ok
     public static final DeferredItem<Item> KITSUNE_UDON =
             ITEMS.register("kitsune_udon", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                     .nutrition(5) // 満腹度の設定
@@ -381,7 +379,7 @@ public class UdonItems {
                     .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 0), 1.0F) // 移動速度上昇 30秒間
                     .build())));
 
-    // 高級きつねうどん
+    // 高級きつねうどん ok
     public static final DeferredItem<Item> RICH_KITSUNE_UDON =
             ITEMS.register("rich_kitsune_udon", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                     .nutrition(7) // 満腹度の設定
@@ -389,7 +387,7 @@ public class UdonItems {
                     .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 1), 1.0F) // 移動速度上昇２ 1分間
                     .build())));
 
-    // ざるうどん
+    // ざるうどん ok
     public static final DeferredItem<Item> ZARU_UDON =
             ITEMS.register("zaru_udon", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                     .nutrition(5) // 満腹度の設定
@@ -397,7 +395,7 @@ public class UdonItems {
                     .fast()
                     .build())));
 
-    // 高級ざるうどん
+    // 高級ざるうどん ok
     public static final DeferredItem<Item> RICH_ZARU_UDON =
             ITEMS.register("rich_zaru_udon", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                     .nutrition(7) // 満腹度の設定

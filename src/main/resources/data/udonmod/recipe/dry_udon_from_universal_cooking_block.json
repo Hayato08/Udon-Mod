@@ -1,0 +1,10 @@
+{
+  "type": "udonmod:universal_cooking_block",
+  "ingredient": {
+    "item": "udonmod:boiled_udon"
+  },
+  "result": {
+    "id": "udonmod:dry_udon",
+    "count": 1
+  }
+}

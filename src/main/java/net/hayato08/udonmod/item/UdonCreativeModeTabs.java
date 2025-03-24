@@ -21,20 +21,20 @@ public class UdonCreativeModeTabs {
                     .title(Component.translatable("creativetab.udonmod.udon_items")) // タブのタイトル
                     .displayItems(((itemDisplayParameters, output) -> // そのタブに表示するアイテム
                     {
-                        output.accept(UdonItems.DASHI);
-                        output.accept(UdonItems.DRY_IWASHI);
-                        output.accept(UdonItems.DRY_KATSUO);
-                        output.accept(UdonItems.DRY_UDON);
-                        output.accept(UdonItems.FLOUR);
-                        output.accept(UdonItems.IWASHI);
                         output.accept(UdonItems.KATSUO);
+                        output.accept(UdonItems.DRY_KATSUO);
                         output.accept(UdonItems.KATSUO_FLAKES);
-                        output.accept(UdonItems.RAW_UDON);
+                        output.accept(UdonItems.IWASHI);
+                        output.accept(UdonItems.DRY_IWASHI);
+                        output.accept(UdonItems.IWASHI_FLAKES);
+                        output.accept(UdonItems.FLOUR);
+                        output.accept(UdonItems.DASHI);
                         output.accept(UdonItems.RICH_DASHI);
-                        output.accept(UdonItems.UDON_ROPE);
+                        output.accept(UdonItems.RAW_UDON);
                         output.accept(UdonItems.BOILED_UDON);
-                        output.accept(UdonItems.OAGE);
+                        output.accept(UdonItems.DRY_UDON);
                         output.accept(UdonItems.ICE_UDON);
+                        output.accept(UdonItems.OAGE);
                     })).build());
 
     // 武器・防具のタブ
@@ -70,8 +70,8 @@ public class UdonCreativeModeTabs {
                     output.accept(UdonItems.ZARU_BOOTS);
 
                     output.accept(UdonItems.KITSUNE_KATANA);
-                    output.accept(UdonItems.COLD_KATANA);
                     output.accept(UdonItems.CURRY_KATANA);
+                    output.accept(UdonItems.COLD_KATANA);
                     output.accept(UdonItems.BUKKAKE_KATANA);
                     output.accept(UdonItems.ZARU_KATANA);
 
@@ -83,14 +83,14 @@ public class UdonCreativeModeTabs {
                     .title(Component.translatable("creativetab.udonmod.udon_foods")) // タブのタイトル
                     .displayItems(((itemDisplayParameters, output) -> // そのタブに表示するアイテム
                     {
-                        output.accept(UdonItems.BUKKAKE_UDON);
-                        output.accept(UdonItems.RICH_BUKKAKE_UDON);
-                        output.accept(UdonItems.COLD_UDON);
-                        output.accept(UdonItems.RICH_COLD_UDON);
-                        output.accept(UdonItems.CURRY_UDON);
-                        output.accept(UdonItems.RICH_CURRY_UDON);
                         output.accept(UdonItems.KITSUNE_UDON);
                         output.accept(UdonItems.RICH_KITSUNE_UDON);
+                        output.accept(UdonItems.CURRY_UDON);
+                        output.accept(UdonItems.RICH_CURRY_UDON);
+                        output.accept(UdonItems.COLD_UDON);
+                        output.accept(UdonItems.RICH_COLD_UDON);
+                        output.accept(UdonItems.BUKKAKE_UDON);
+                        output.accept(UdonItems.RICH_BUKKAKE_UDON);
                         output.accept(UdonItems.ZARU_UDON);
                         output.accept(UdonItems.RICH_ZARU_UDON);
                     })).build());
@@ -102,6 +102,7 @@ public class UdonCreativeModeTabs {
                     .displayItems(((itemDisplayParameters, output) -> // そのタブに表示するアイテム
                     {
                         output.accept(UdonBlocks.STONE_MILL);
+                        output.accept(UdonBlocks.UNIVERSAL_COOKING_BLOCK);
                     })).build());
 
     public static void register(IEventBus eventBus)
