@@ -17,6 +17,7 @@ public class UdonBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(UdonBlocks.STONE_MILL.get());
+        dropSelf(UdonBlocks.UNIVERSAL_COOKING_BLOCK.get());
 
         add(UdonBlocks.STONE_MILL.get(),
                 block -> createBannerDrop(UdonBlocks.STONE_MILL.get()));

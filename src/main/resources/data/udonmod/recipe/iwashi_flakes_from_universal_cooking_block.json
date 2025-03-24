@@ -1,0 +1,10 @@
+{
+  "type": "udonmod:universal_cooking_block",
+  "ingredient": {
+    "item": "udonmod:iwashi"
+  },
+  "result": {
+    "id": "udonmod:iwashi_flakes",
+    "count": 4
+  }
+}

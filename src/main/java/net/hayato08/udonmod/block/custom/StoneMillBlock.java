@@ -1,4 +1,4 @@
-package net.hayato08.udonmod.block;
+package net.hayato08.udonmod.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;

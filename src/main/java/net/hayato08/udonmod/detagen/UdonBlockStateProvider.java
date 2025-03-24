@@ -16,6 +16,7 @@ public class UdonBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels()
     {
         blockWithItem(UdonBlocks.STONE_MILL);
+        blockWithItem(UdonBlocks.UNIVERSAL_COOKING_BLOCK);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock)
