@@ -1,6 +1,7 @@
 {
   "item.udonmod.flour": "小麦粉",
   "item.udonmod.dashi": "出汁の素",
+  "item.udonmod.iwashi_flakes": "魚粉",
   "item.udonmod.bukkake_udon": "ぶっかけうどん",
   "item.udonmod.rich_bukkake_udon": "高級ぶっかけうどん",
   "item.udonmod.curry_udon": "カレーうどん",
@@ -13,7 +14,7 @@
   "item.udonmod.rich_zaru_udon": "高級ざるうどん",
   "item.udonmod.kitsune_udon": "きつねうどん",
   "item.udonmod.rich_kitsune_udon": "高級きつねうどん",
-  "item.udonmod.rich_dashi": "高級だし",
+  "item.udonmod.rich_dashi": "高級だしの素",
   "item.udonmod.katsuo": "かつお",
   "item.udonmod.katsuo_flakes": "削りかつお節",
   "item.udonmod.dry_katsuo": "かつお節",
@@ -59,8 +60,10 @@
   "entity.udonmod.wolfox": "狐狼",
 
   "block.udonmod.stone_mill": "石臼",
-
   "gui.udonmod.stone_mill_gui.button_mill": "製粉",
+
+
+  "block.udonmod.universal_cooking_block": "万能調理器",
 
   "creativetab.udonmod.udon_items": "うどんアイテム",
   "creativetab.udonmod.udon_tools": "うどんツール",

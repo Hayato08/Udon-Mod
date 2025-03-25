@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-15T16:12:47.872415	Item Models: udonmod
+// 1.21.1	2025-03-25T03:53:42.272492	Item Models: udonmod
 ebaa01a0c6c40d29244802167fd367200e5fca3b assets/udonmod/models/item/boiled_udon.json
 5c99974d1ad44e7df08cb31e9429d72a0d26f667 assets/udonmod/models/item/bukkake_boots.json
 65fbd772488a3512af1a050d3d845b39b6a98a40 assets/udonmod/models/item/bukkake_boots_amethyst_trim.json
@@ -198,7 +198,6 @@ bf01c8cdf2835fd3ec78b03ab3f316571de06616 assets/udonmod/models/item/rich_curry_u
 409bc733acac2aa567f1c1f729ffd3f1132feb44 assets/udonmod/models/item/rich_dashi.json
 b9c103a8107938dbe829b668141ced3151e36fe2 assets/udonmod/models/item/rich_kitsune_udon.json
 7a2c388b83f4373e630c506480d3a42e0fc34a13 assets/udonmod/models/item/rich_zaru_udon.json
-61872794dac373821536b33f8af6d91cc76ec881 assets/udonmod/models/item/udon_rope.json
 e039edf8df8468da0e028b0aa655a17003f5417b assets/udonmod/models/item/zaru_boots.json
 ec122383818174b3ec1458d5964232aa3b0a12eb assets/udonmod/models/item/zaru_boots_amethyst_trim.json
 71c262958b5191dafab9512217f4d13cfeabf3c4 assets/udonmod/models/item/zaru_boots_copper_trim.json

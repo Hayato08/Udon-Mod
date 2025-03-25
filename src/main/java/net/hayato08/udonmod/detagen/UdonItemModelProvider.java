@@ -48,7 +48,6 @@ public class UdonItemModelProvider extends ItemModelProvider {
         basicItem(UdonItems.RAW_UDON.get());
         basicItem(UdonItems.RICH_DASHI.get());
         basicItem(UdonItems.ICE_UDON.get());
-        basicItem(UdonItems.UDON_ROPE.get());
         basicItem(UdonItems.BUKKAKE_UDON.get());
         basicItem(UdonItems.RICH_BUKKAKE_UDON.get());
         basicItem(UdonItems.COLD_UDON.get());

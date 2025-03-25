@@ -22,14 +22,14 @@ public class ItemRecipelProvider extends RecipeProvider {
     protected void buildRecipes(RecipeOutput recipeOutput)
     {
         List<ItemLike> RAW_UDON_SMELTING = List.of(UdonItems.RAW_UDON);
-        List<ItemLike> BOILED_UDON_SMELTING = List.of(UdonItems.BOILED_UDON);
 
         oreSmelting(recipeOutput, RAW_UDON_SMELTING, RecipeCategory.MISC, UdonItems.BOILED_UDON,0.25f, 200, "boiled_udon");
         oreBlasting(recipeOutput, RAW_UDON_SMELTING, RecipeCategory.MISC, UdonItems.BOILED_UDON,0.25f, 100, "boiled_udon");
 
-        oreSmelting(recipeOutput, BOILED_UDON_SMELTING, RecipeCategory.MISC, UdonItems.DRY_UDON,0.25f, 200, "dry_udon");
-        oreBlasting(recipeOutput, BOILED_UDON_SMELTING, RecipeCategory.MISC, UdonItems.DRY_UDON,0.25f, 100, "dry_udon");
-
+        // だしの素
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UdonItems.DASHI.get(), 1)
+                .requires(UdonItems.KATSUO_FLAKES)
+                .unlockedBy("has_katsuo", has(UdonItems.KATSUO)).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UdonBlocks.STONE_MILL.get())
                 .pattern("ABB")
@@ -40,12 +40,21 @@ public class ItemRecipelProvider extends RecipeProvider {
                 .define('C', Items.STONE)
                 .unlockedBy("has_stone", has(Items.STONE)).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UdonBlocks.UNIVERSAL_COOKING_BLOCK.get())
+                .pattern("AAA")
+                .pattern("CBC")
+                .pattern("AAA")
+                .define('A', Items.IRON_BLOCK)
+                .define('B', Items.FURNACE)
+                .define('C', Items.REDSTONE_BLOCK)
+                .unlockedBy("has_iron_block", has(Items.IRON_BLOCK)).save(recipeOutput);
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UdonItems.ICE_UDON.get())
                 .pattern(" B ")
                 .pattern("BAB")
                 .pattern(" B ")
-                .define('A', UdonItems.RAW_UDON)
+                .define('A', UdonItems.BOILED_UDON)
                 .define('B', Items.ICE)
                 .unlockedBy("has_boiled_udon", has(UdonItems.BOILED_UDON)).save(recipeOutput);
 
@@ -248,9 +257,9 @@ public class ItemRecipelProvider extends RecipeProvider {
 
 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UdonItems.RAW_UDON.get())
-                .requires(UdonItems.FLOUR)
-                .requires( Items.EGG)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UdonItems.RAW_UDON.get(), 6)
+                .requires(UdonItems.FLOUR, 3)
+                .requires(Items.EGG)
                 .unlockedBy("has_flour", has(UdonItems.FLOUR)).save(recipeOutput);
 
 
@@ -280,13 +289,9 @@ public class ItemRecipelProvider extends RecipeProvider {
                 .requires(UdonItems.OAGE)
                 .unlockedBy("has_boiled_udon", has(UdonItems.BOILED_UDON)).save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UdonItems.DASHI.get(), 4)
-                .requires(UdonItems.KATSUO_FLAKES)
-                .unlockedBy("has_katsuo", has(UdonItems.KATSUO)).save(recipeOutput);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UdonItems.RICH_DASHI.get(), 4)
-                .requires(UdonItems.DASHI, 4)
-                .requires(UdonItems.DRY_IWASHI)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UdonItems.RICH_DASHI.get(), 1)
+                .requires(UdonItems.DASHI)
+                .requires(UdonItems.IWASHI_FLAKES)
                 .unlockedBy("has_iwashi", has(UdonItems.DRY_IWASHI)).save(recipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UdonItems.BUKKAKE_UDON.get())

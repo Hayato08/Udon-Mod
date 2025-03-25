@@ -23,6 +23,8 @@
   "item.udonmod.raw_udon": "Raw Udon",
   "item.udonmod.boiled_udon": "Boiled Udon",
   "item.udonmod.oage": "Oage",
+  "item.udonmod.iwashi_flakes": "Fish flakes",
+
 
   "item.udonmod.kitsune_katana": "Wolfox Sword",
   "item.udonmod.bukkake_katana": "Bukkake Sword",
@@ -59,6 +61,8 @@
 
   "block.udonmod.stone_mill": "Stone Mill Block",
   "gui.udonmod.stone_mill_gui.button_mill": "Mill",
+
+  "block.udonmod.universal_cooking_block": "Universal Cooking Block",
 
   "creativetab.udonmod.udon_items": "Udon Items",
   "creativetab.udonmod.udon_tools": "Udon Tools",

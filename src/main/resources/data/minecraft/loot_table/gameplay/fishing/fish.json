@@ -7,12 +7,30 @@
         {
           "type": "minecraft:item",
           "weight": 25,
-          "name": "udonmod:iwashi"
+          "name": "udonmod:iwashi",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
         },
         {
           "type": "minecraft:item",
           "weight": 50,
-          "name": "udonmod:katsuo"
+          "name": "udonmod:katsuo",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
         },
         {
           "type": "minecraft:item",

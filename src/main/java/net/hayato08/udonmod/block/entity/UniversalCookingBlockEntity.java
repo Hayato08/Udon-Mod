@@ -39,8 +39,6 @@ public class UniversalCookingBlockEntity extends BlockEntity implements MenuProv
     private int progress = 0;
     private int maxProgress = 72;
 
-
-
     public final ItemStackHandler itemHandler = new ItemStackHandler(SLOT_COUNT)
     {
         @Override
