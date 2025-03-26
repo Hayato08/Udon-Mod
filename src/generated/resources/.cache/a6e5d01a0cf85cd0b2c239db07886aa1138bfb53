@@ -1,7 +1,7 @@
-// 1.21.1	2025-03-24T19:45:31.4998483	Block States: udonmod
+// 1.21.1	2025-03-27T02:12:08.6691739	Block States: udonmod
 a81a45a2fbb17d8b9556e24d391658b8458f63b6 assets/udonmod/blockstates/stone_mill.json
 fb6315c098fce369c78412e42b57bf7f737aa6d5 assets/udonmod/blockstates/universal_cooking_block.json
 83cfca122fdbaca85957f53d02f03a5cf7d37258 assets/udonmod/models/block/stone_mill.json
-eed97ba9601c01c61b0d53a8a9dcd6f2c9ec74d9 assets/udonmod/models/block/universal_cooking_block.json
+be94fe95ea123518b029ee592a69a64f9e7b7bc4 assets/udonmod/models/block/universal_cooking_block.json
 193f484a9920f2247a225ea358b15f866ac3cd8d assets/udonmod/models/item/stone_mill.json
 d539e412cf7dd1300e9c8a3e0333599d24cae920 assets/udonmod/models/item/universal_cooking_block.json

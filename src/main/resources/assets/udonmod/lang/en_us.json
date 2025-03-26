@@ -19,7 +19,6 @@
   "item.udonmod.ice_udon": "Ice Udon",
   "item.udonmod.iwashi": "Iwashi",
   "item.udonmod.dry_iwashi": "Dry Iwashi",
-  "item.udonmod.udon_rope": "Udon rope",
   "item.udonmod.raw_udon": "Raw Udon",
   "item.udonmod.boiled_udon": "Boiled Udon",
   "item.udonmod.oage": "Oage",
@@ -62,7 +61,7 @@
   "block.udonmod.stone_mill": "Stone Mill Block",
   "gui.udonmod.stone_mill_gui.button_mill": "Mill",
 
-  "block.udonmod.universal_cooking_block": "Universal Cooking Block",
+  "block.udonmod.universal_cooking_block": "Drying Machine",
 
   "creativetab.udonmod.udon_items": "Udon Items",
   "creativetab.udonmod.udon_tools": "Udon Tools",

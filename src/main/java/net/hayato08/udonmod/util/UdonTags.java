@@ -1,7 +1,6 @@
 package net.hayato08.udonmod.util;
 
 import net.hayato08.udonmod.UdonMod;
-import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;

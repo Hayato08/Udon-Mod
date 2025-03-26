@@ -24,7 +24,6 @@
 
   "item.udonmod.iwashi": "いわし",
   "item.udonmod.dry_iwashi": "にぼし",
-  "item.udonmod.udon_rope": "うどんロープ",
 
   "item.udonmod.kitsune_leggings": "キツネレギンス",
   "item.udonmod.kitsune_boots": "キツネブーツ",
@@ -63,7 +62,7 @@
   "gui.udonmod.stone_mill_gui.button_mill": "製粉",
 
 
-  "block.udonmod.universal_cooking_block": "万能調理器",
+  "block.udonmod.universal_cooking_block": "乾燥機",
 
   "creativetab.udonmod.udon_items": "うどんアイテム",
   "creativetab.udonmod.udon_tools": "うどんツール",
