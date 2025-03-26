@@ -61,7 +61,7 @@ public class UniversalCookingBlock extends BaseEntityBlock {
         if(!level.isClientSide) {
             BlockEntity blockEntity = level.getBlockEntity(pos);
             if(blockEntity instanceof UniversalCookingBlockEntity universalCookingBlockEntity) {
-                ((ServerPlayer) player).openMenu(new SimpleMenuProvider(universalCookingBlockEntity, Component.literal("Universal Cooking")), pos);
+                ((ServerPlayer) player).openMenu(new SimpleMenuProvider(universalCookingBlockEntity, Component.translatable("block.udonmod.universal_cooking_block")), pos);
             }
             else {
                 throw new IllegalStateException("Our Container provider is missing!");

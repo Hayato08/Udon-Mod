@@ -30,8 +30,7 @@ public class UdonBlocks {
     public static final DeferredBlock<Block> UNIVERSAL_COOKING_BLOCK =
             registerBlock("universal_cooking_block", () -> new UniversalCookingBlock(BlockBehaviour.Properties.of()
                     .strength(4f)
-                    .requiresCorrectToolForDrops()
-                    .sound(SoundType.STONE)
+                    .sound(SoundType.WOOD)
             ));
 
 

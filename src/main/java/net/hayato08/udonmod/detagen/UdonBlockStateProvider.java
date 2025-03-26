@@ -9,18 +9,29 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class UdonBlockStateProvider extends BlockStateProvider {
     public UdonBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-    super(output, UdonMod.MOD_ID, exFileHelper);
+        super(output, UdonMod.MOD_ID, exFileHelper);
     }
 
     @Override
-    protected void registerStatesAndModels()
-    {
+    protected void registerStatesAndModels() {
         blockWithItem(UdonBlocks.STONE_MILL);
-        blockWithItem(UdonBlocks.UNIVERSAL_COOKING_BLOCK);
+
+        // Special case for Universal Cooking Block with different textures
+        var block = UdonBlocks.UNIVERSAL_COOKING_BLOCK.get();
+        var side = modLoc("block/universal_cooking_block_1");
+        var topBottom = modLoc("block/universal_cooking_block_2");
+
+        var model = models().cubeBottomTop(
+                "block/universal_cooking_block",  // model name
+                side,       // side texture
+                topBottom,  // bottom texture
+                topBottom   // top texture
+        );
+
+        simpleBlockWithItem(block, model);
     }
 
-    private void blockWithItem(DeferredBlock<?> deferredBlock)
-    {
+    private void blockWithItem(DeferredBlock<?> deferredBlock) {
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
 }
