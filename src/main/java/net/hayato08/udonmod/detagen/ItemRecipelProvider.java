@@ -42,12 +42,11 @@ public class ItemRecipelProvider extends RecipeProvider {
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UdonBlocks.UNIVERSAL_COOKING_BLOCK.get())
                 .pattern("AAA")
-                .pattern("CBC")
+                .pattern("ABA")
                 .pattern("AAA")
-                .define('A', Items.IRON_BLOCK)
+                .define('A',ItemTags.PLANKS)
                 .define('B', Items.FURNACE)
-                .define('C', Items.REDSTONE_BLOCK)
-                .unlockedBy("has_iron_block", has(Items.IRON_BLOCK)).save(recipeOutput);
+                .unlockedBy("has_iron_block", has(Items.FURNACE)).save(recipeOutput);
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UdonItems.ICE_UDON.get())

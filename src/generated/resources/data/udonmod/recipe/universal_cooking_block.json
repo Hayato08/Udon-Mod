@@ -3,18 +3,15 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:iron_block"
+      "tag": "minecraft:planks"
     },
     "B": {
       "item": "minecraft:furnace"
-    },
-    "C": {
-      "item": "minecraft:redstone_block"
     }
   },
   "pattern": [
     "AAA",
-    "CBC",
+    "ABA",
     "AAA"
   ],
   "result": {
