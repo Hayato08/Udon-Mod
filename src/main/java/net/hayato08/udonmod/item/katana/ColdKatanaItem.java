@@ -29,7 +29,7 @@ public class ColdKatanaItem extends SwordItem {
         Level level = attacker.level();
         if (level.dimension() == Level.NETHER) {
             // ネザーでの攻撃時、追加ダメージを与える
-            float extraDamage = UdonItems.ATTACK_DAMAGE_OF_COLD_KATANA * 1.5f; // 基本ダメージの50%を追加
+            float extraDamage = UdonItems.ATTACK_DAMAGE_OF_COLD_KATANA * 2.5f; // 基本ダメージの250%を追加
             target.hurt(level.damageSources().playerAttack((Player) attacker), extraDamage);
         }
         return super.hurtEnemy(stack, target, attacker);

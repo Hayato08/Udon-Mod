@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-25T04:12:00.318507	Recipes
+// 1.21.1	2025-04-22T17:45:51.626294	Recipes
 e4b29ad61369163b0fe9a5f5158d583e215004c1 data/minecraft/advancement/recipes/misc/boiled_udon_from_blasting_raw_udon.json
 d42b332fbc869d7b8795ad6c68575885a96e20f1 data/minecraft/advancement/recipes/misc/boiled_udon_from_smelting_raw_udon.json
 606f0072c28575b3534563be910a7d43cf278a22 data/minecraft/recipe/boiled_udon_from_blasting_raw_udon.json
@@ -37,7 +37,7 @@ e1190ac2faeb1121db6071dd6974deb44243002e data/udonmod/advancement/recipes/misc/k
 57de63b5b1b9a0cbf59e4106955fb990f2542682 data/udonmod/advancement/recipes/misc/rich_kitsune_udon.json
 74cda14594bf082e358c78c435954798f2a0aa2e data/udonmod/advancement/recipes/misc/rich_zaru_udon.json
 6058a02ceba37bac76b17e0475491e3291c79f24 data/udonmod/advancement/recipes/misc/stone_mill.json
-0596c2c72f7679c33b7b0dd963a81c14300b585d data/udonmod/advancement/recipes/misc/universal_cooking_block.json
+a43437d05b10a3c5f4e6bce3952ffecc6f634769 data/udonmod/advancement/recipes/misc/universal_cooking_block.json
 ede3bafd522a5e68ef8d2ac6d2bb143890354d4e data/udonmod/advancement/recipes/misc/zaru_boots.json
 38c8076b33ea34dc4e625b0a7421d27ab1f285a1 data/udonmod/advancement/recipes/misc/zaru_chestplate.json
 9b10dc4757c2c4982197253aa72486c8ce586248 data/udonmod/advancement/recipes/misc/zaru_helmet.json
@@ -78,7 +78,7 @@ a5651cd240df8ff77674d07f23aebc15387a2a9a data/udonmod/recipe/rich_dashi.json
 79cbffc10dbb5f1a9fa06277012fa485d9f3f17e data/udonmod/recipe/rich_kitsune_udon.json
 18180bd6e6ca577e557d29a617515adc704f0161 data/udonmod/recipe/rich_zaru_udon.json
 3f45eebccb16cb08c0dcef7d0fcefb968be8cd8c data/udonmod/recipe/stone_mill.json
-ab23adab635528a723363a8a861cc6b36bafe0aa data/udonmod/recipe/universal_cooking_block.json
+c7e02d95b7e96ec9e6b93aae6ffb35630202d5eb data/udonmod/recipe/universal_cooking_block.json
 cabe82d09006b0b574b5b6a43ea97336d599734e data/udonmod/recipe/zaru_boots.json
 e502a771a13aa51cf1477137adaeff96bb652608 data/udonmod/recipe/zaru_chestplate.json
 a5ceb314c2f7fc63de692c3c0aa033190b386652 data/udonmod/recipe/zaru_helmet.json
